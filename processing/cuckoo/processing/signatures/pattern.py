@@ -1022,6 +1022,9 @@ class PatternScanner:
         if not scandb:
             return
 
+        if isinstance(scan_str, str):
+            scan_str = scan_str.encode('unicode_escape')
+
         scandb.scan(
             scan_str, self._on_match,
             context=(scan_str, orig_str, event, event_kind, processing_ctx,
