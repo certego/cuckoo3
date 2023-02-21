@@ -1,0 +1,117 @@
+file {
+  name: "file.proto"
+  package: "threemon"
+  message_type {
+    name: "File"
+    field {
+      name: "ts"
+      number: 7
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 9
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "kind"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.FileAccess"
+    }
+    field {
+      name: "status"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "id"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "flags"
+      number: 8
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.FileFlags"
+    }
+    field {
+      name: "srcpath"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "dstpath"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+  }
+  enum_type {
+    name: "FileAccess"
+    value {
+      name: "Unknown"
+      number: 0
+    }
+    value {
+      name: "OpenRead"
+      number: 1
+    }
+    value {
+      name: "OpenModify"
+      number: 2
+    }
+    value {
+      name: "CreateRead"
+      number: 3
+    }
+    value {
+      name: "CreateModify"
+      number: 4
+    }
+    value {
+      name: "Delete"
+      number: 5
+    }
+    value {
+      name: "DeleteDelayed"
+      number: 6
+    }
+    value {
+      name: "Rename"
+      number: 7
+    }
+    value {
+      name: "Truncate"
+      number: 8
+    }
+  }
+  enum_type {
+    name: "FileFlags"
+    value {
+      name: "NoFileFlags"
+      number: 0
+    }
+    value {
+      name: "DumpContents"
+      number: 1
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

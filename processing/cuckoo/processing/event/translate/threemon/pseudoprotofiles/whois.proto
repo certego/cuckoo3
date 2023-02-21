@@ -1,0 +1,125 @@
+file {
+  name: "whois.proto"
+  package: "threemon"
+  message_type {
+    name: "Whois"
+    field {
+      name: "arch"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.Architecture"
+    }
+    field {
+      name: "os"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.OS"
+    }
+    field {
+      name: "author"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "major"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "minor"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "build"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "commit"
+      number: 7
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "is64bit"
+      number: 8
+      label: LABEL_OPTIONAL
+      type: TYPE_BOOL
+    }
+    field {
+      name: "features"
+      number: 9
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+  }
+  enum_type {
+    name: "Architecture"
+    value {
+      name: "x86"
+      number: 0
+    }
+    reserved_range {
+      start: 1
+      end: 5
+    }
+  }
+  enum_type {
+    name: "OS"
+    value {
+      name: "Win7SP0"
+      number: 0
+    }
+    value {
+      name: "Win7SP1"
+      number: 1
+    }
+    value {
+      name: "Win8_0"
+      number: 2
+    }
+    value {
+      name: "Win8_1"
+      number: 3
+    }
+    value {
+      name: "Win10_1507"
+      number: 4
+    }
+    value {
+      name: "Win10_1511"
+      number: 5
+    }
+    value {
+      name: "Win10_1607"
+      number: 6
+    }
+    value {
+      name: "Win10_1703"
+      number: 7
+    }
+    value {
+      name: "Win10_1709"
+      number: 8
+    }
+    value {
+      name: "Win10_1803"
+      number: 9
+    }
+    reserved_range {
+      start: 10
+      end: 10
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

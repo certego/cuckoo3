@@ -1,0 +1,126 @@
+file {
+  name: "mutant.proto"
+  package: "threemon"
+  message_type {
+    name: "Mutant"
+    field {
+      name: "ts"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "action"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.MutantAction"
+    }
+    field {
+      name: "status"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "path"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+  }
+  message_type {
+    name: "Event"
+    field {
+      name: "ts"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "action"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.EventAction"
+    }
+    field {
+      name: "status"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "path"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+  }
+  enum_type {
+    name: "MutantAction"
+    value {
+      name: "MutantUndefined"
+      number: 0
+    }
+    value {
+      name: "MutantCreate"
+      number: 1
+    }
+    value {
+      name: "MutantOpen"
+      number: 2
+    }
+  }
+  enum_type {
+    name: "EventAction"
+    value {
+      name: "EventUndefined"
+      number: 0
+    }
+    value {
+      name: "EventOpen"
+      number: 1
+    }
+    value {
+      name: "EventOpenPair"
+      number: 2
+    }
+    value {
+      name: "EventCreate"
+      number: 3
+    }
+    value {
+      name: "EventCreatePair"
+      number: 4
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

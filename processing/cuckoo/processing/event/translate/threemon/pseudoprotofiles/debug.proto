@@ -1,0 +1,74 @@
+file {
+  name: "debug.proto"
+  package: "threemon"
+  message_type {
+    name: "Debug"
+    field {
+      name: "ts"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "key"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "value"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_BYTES
+    }
+  }
+  message_type {
+    name: "Log"
+    field {
+      name: "ts"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "message"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "blob"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_BYTES
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

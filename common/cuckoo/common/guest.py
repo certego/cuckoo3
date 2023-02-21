@@ -439,7 +439,7 @@ class TmStage(StagerHelper):
 
         options = self.analysis.settings.options
         settings = self._build_settings(
-            debug=False, resultserver=self.resultserver,
+            debug=True, resultserver=self.resultserver,
             options=options, target=target, is_archive=is_archive
         )
 

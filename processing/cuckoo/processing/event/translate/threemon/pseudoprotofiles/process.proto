@@ -1,0 +1,95 @@
+file {
+  name: "process.proto"
+  package: "threemon"
+  message_type {
+    name: "Process"
+    field {
+      name: "ts"
+      number: 7
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "status"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.ProcessStatus"
+    }
+    field {
+      name: "pid"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 9
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "ppid"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "parentprocid"
+      number: 10
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "image"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "command"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "orig"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_BOOL
+    }
+    field {
+      name: "exit_status"
+      number: 8
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+  }
+  enum_type {
+    name: "ProcessStatus"
+    value {
+      name: "Create"
+      number: 0
+    }
+    value {
+      name: "Terminate"
+      number: 1
+    }
+    value {
+      name: "Existing"
+      number: 2
+    }
+    value {
+      name: "Ignore"
+      number: 3
+    }
+    value {
+      name: "Hidden"
+      number: 4
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

@@ -1,0 +1,98 @@
+file {
+  name: "network.proto"
+  package: "threemon"
+  message_type {
+    name: "NetworkFlow"
+    field {
+      name: "ts"
+      number: 7
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 8
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "proto"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "srcip"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_FIXED32
+    }
+    field {
+      name: "dstip"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_FIXED32
+    }
+    field {
+      name: "srcport"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "dstport"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+  }
+  message_type {
+    name: "MasterSecret"
+    field {
+      name: "ts"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 7
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "arg0"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_BYTES
+    }
+    field {
+      name: "arg1"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_BYTES
+    }
+    field {
+      name: "arg2"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_BYTES
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

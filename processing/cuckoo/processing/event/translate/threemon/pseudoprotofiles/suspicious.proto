@@ -1,0 +1,123 @@
+file {
+  name: "suspicious.proto"
+  package: "threemon"
+  message_type {
+    name: "Suspicious"
+    field {
+      name: "ts"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "event"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.SuspiciousEvent"
+    }
+    field {
+      name: "arg1"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "arg2"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+  }
+  enum_type {
+    name: "SuspiciousEvent"
+    value {
+      name: "UnmapMainImage"
+      number: 0
+    }
+    value {
+      name: "NtCreateThreadExHideFromDebugger"
+      number: 1
+    }
+    value {
+      name: "NtSetInformationThreadHideFromDebugger"
+      number: 2
+    }
+    value {
+      name: "NtCreateProcessOtherParentProcess"
+      number: 3
+    }
+    value {
+      name: "NtCreateProcessExOtherParentProcess"
+      number: 4
+    }
+    value {
+      name: "NtCreateUserProcessOtherParentProcess"
+      number: 5
+    }
+    value {
+      name: "SetWindowsHookAW"
+      number: 7
+    }
+    value {
+      name: "SetWindowsHookEx"
+      number: 8
+    }
+    value {
+      name: "AdjustPrivilegeToken"
+      number: 11
+    }
+    value {
+      name: "DeletesItself"
+      number: 12
+    }
+    value {
+      name: "LoadsDroppedDLL"
+      number: 13
+    }
+    value {
+      name: "ExecutesDroppedEXE"
+      number: 14
+    }
+    value {
+      name: "WriteProcessMemory"
+      number: 17
+    }
+    value {
+      name: "SetThreadContext"
+      number: 18
+    }
+    value {
+      name: "EnumeratesProcesses"
+      number: 19
+    }
+    value {
+      name: "MapViewOfSection"
+      number: 21
+    }
+    value {
+      name: "LoadsDriver"
+      number: 22
+    }
+    value {
+      name: "CmdExeWriteProcessMemorySpam"
+      number: 23
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

@@ -2,7 +2,8 @@
 # See the file 'LICENSE' for copying permission.
 
 from binascii import a2b_hex
-
+import json
+import os
 from cuckoo.processing import abtracts
 from cuckoo.processing.event import registrytools, processtools, filetools
 from cuckoo.processing.event.events import (
@@ -14,9 +15,22 @@ from cuckoo.processing.event.events import (
 from google.protobuf import message
 
 from . import (
-    file_pb2, inject_pb2, mutant_pb2, network_pb2, process_pb2, registry_pb2,
-    suspicious_pb2
+    autogen_pb2,
+    debug_pb2,
+    file_pb2,
+    inject_pb2,
+    mutant_pb2,
+    network_pb2,
+    notification_pb2,
+    process_pb2,
+    registry_pb2,
+    suspicious_pb2,
+    thread_pb2,
+    vminfo_pb2,
+    whois_pb2,
 )
+
+json_dump_filepath = "/home/cuckoouser/dumpall.json"
 
 _FILE_ACTION_TRANSLATE = {
     file_pb2.OpenRead: FileActions.OPEN_READ,
@@ -27,6 +41,7 @@ _FILE_ACTION_TRANSLATE = {
     file_pb2.Rename: FileActions.RENAME,
     file_pb2.Truncate: FileActions.TRUNCATE
 }
+
 
 def _translate_file_event(threemon_file, ctx):
     normalized_action = _FILE_ACTION_TRANSLATE.get(threemon_file.kind)
@@ -57,6 +72,7 @@ _PROCESS_STATUS_TRANSLATE = {
     process_pb2.Terminate: ProcessStatuses.TERMINATED
 }
 
+
 def _translate_process_event(threemon_process, ctx):
     normalized_status = _PROCESS_STATUS_TRANSLATE.get(threemon_process.status)
     if not normalized_status:
@@ -72,7 +88,7 @@ def _translate_process_event(threemon_process, ctx):
         procid, parent_procid = ctx.processes.new_process(
             threemon_process.ts, threemon_process.pid, threemon_process.ppid,
             threemon_process.image, threemon_process.command,
-            tracked=normalized_status==ProcessStatuses.CREATED
+            tracked=normalized_status == ProcessStatuses.CREATED
         )
     else:
         raise ValueError(f"Unexpected process state: {normalized_status}")
@@ -87,6 +103,7 @@ def _translate_process_event(threemon_process, ctx):
             threemon_process.command, threemon_process.image
         )
     )
+
 
 _REGISTRY_ACTION_TRANSLATE = {
     registry_pb2.CreateKey: RegistryActions.CREATE_KEY,
@@ -136,6 +153,7 @@ reg_read_ignorellist = tuple(
     [f"{hive}{key}" for hive in hives for key in reg_read_ignore]
 )
 
+
 def remove_user_id(k):
     k = k.lower()
     if not k.startswith("\\registry\\user\\s-"):
@@ -149,8 +167,10 @@ def remove_user_id(k):
 
     return f"{k[:14]}{k[offset:]}"
 
+
 def ignoredlisted_key(k):
     return remove_user_id(k).startswith(reg_read_ignorellist)
+
 
 def _translate_registry_event(threemon_registry, ctx):
     normalized_action = _REGISTRY_ACTION_TRANSLATE.get(threemon_registry.kind)
@@ -179,7 +199,6 @@ def _translate_registry_event(threemon_registry, ctx):
             if ignoredlisted_key(threemon_registry.path):
                 return None
 
-
     return Registry(
         ts=threemon_registry.ts, action=normalized_action,
         status=threemon_registry.status, pid=threemon_registry.pid,
@@ -190,11 +209,13 @@ def _translate_registry_event(threemon_registry, ctx):
         )
     )
 
+
 _INJECTION_ACTION_TRANSLATE = {
     inject_pb2.CreateRemoteThread: ProcessInjectActions.CREATE_REMOTE_THREAD,
     inject_pb2.ShellTrayWindow: ProcessInjectActions.SHELL_TRAYWINDOW,
     inject_pb2.QueueUserAPC: ProcessInjectActions.QUEUE_USER_APC
 }
+
 
 def _translate_injection_event(threemon_injection, ctx):
     normalized_action = _INJECTION_ACTION_TRANSLATE.get(
@@ -220,6 +241,7 @@ def _translate_injection_event(threemon_injection, ctx):
         dstprocid=ctx.processes.lookup_procid(threemon_injection.dstpid)
     )
 
+
 def _translate_networkflow_event(threemon_netflow, ctx):
     return NetworkFlow(
         ts=threemon_netflow.ts, pid=threemon_netflow.pid,
@@ -235,6 +257,7 @@ _MUTANT_ACTION_TRANSLATE = {
     mutant_pb2.MutantOpen: MutantActions.OPEN
 }
 
+
 def _translate_mutant_event(threemon_mutant, ctx):
     normalized_action = _MUTANT_ACTION_TRANSLATE.get(threemon_mutant.action)
     if not normalized_action:
@@ -246,6 +269,7 @@ def _translate_mutant_event(threemon_mutant, ctx):
         procid=ctx.processes.lookup_procid(threemon_mutant.pid),
         path=threemon_mutant.path
     )
+
 
 _SUSPICIOUS_EVENT_TRANSLATE = {
     suspicious_pb2.UnmapMainImage: SuspiciousEvents.UNMAPMAINIMAGE,
@@ -266,6 +290,7 @@ _SUSPICIOUS_EVENT_TRANSLATE = {
     suspicious_pb2.MapViewOfSection: SuspiciousEvents.MAPVIEWOFSECTION,
     suspicious_pb2.LoadsDriver: SuspiciousEvents.LOADSDRIVER
 }
+
 
 def _translate_suspicious_event(threemon_suspicious, ctx):
     normalized = _SUSPICIOUS_EVENT_TRANSLATE.get(threemon_suspicious.event)
@@ -291,6 +316,7 @@ def _translate_suspicious_event(threemon_suspicious, ctx):
         args=tuple(args)
     )
 
+
 def _translate_tls_session(threemon_tlssession, ctx):
     ctx.tlssessions.add_session(
         client_random=a2b_hex(threemon_tlssession.arg0),
@@ -309,11 +335,13 @@ _kindmap = {
     9: (mutant_pb2.Mutant, _translate_mutant_event),
     # 10: (thread_pb2.ThreadContext,),
     12: (network_pb2.NetworkFlow, _translate_networkflow_event),
+    # 13: (??)
     # 14: (whois_pb2.Whois,),
     # 15: (vminfo_pb2.Vminfo,),
     # 16: (mutant_pb2.Event,),
     105: (network_pb2.MasterSecret, _translate_tls_session)
     # 126: (debug_pb2.Debug,)
+    # 127: (??)
 }
 
 
@@ -331,6 +359,7 @@ class _FileIdTracker:
     def clear(self):
         self._files = {}
 
+
 class _TranslateContext:
 
     def __init__(self, taskctx):
@@ -343,11 +372,11 @@ class _TranslateContext:
 
 
 class ThreemonReader(abtracts.LogFileTranslator):
-
     name = "Threemon reader"
     supports = ("threemon.pb",)
 
     def read_events(self):
+        dumpdata = dict()
         buffreader = self._fp
         translate_context = _TranslateContext(self._taskctx)
         while True:
@@ -361,14 +390,36 @@ class ThreemonReader(abtracts.LogFileTranslator):
                 buffreader.seek(start_offset)
                 break
 
-            data_size = sum(b * (256**i) for i, b in enumerate(header[:3]))
+            data_size = sum(b * (256 ** i) for i, b in enumerate(header[:3]))
             kind = int(header[3])
 
             decoder_normalizer = _kindmap.get(kind)
             if not decoder_normalizer or len(decoder_normalizer) != 2:
                 # Unsupported event kind. Skip the amount of bytes equal to
                 # the event data size. The header bytes are already read.
-                buffreader.seek(buffreader.tell() + data_size)
+                if kind == 5:
+                    category = "Notification"
+                elif kind == 10:
+                    category = "ThreadContext"
+                elif kind == 14:
+                    category = "Whois"
+                elif kind == 15:
+                    category = "Vminfo"
+                elif kind == 16:
+                    category = "Event"
+                elif kind == 126:
+                    category = "Debug"
+                else:
+                    category = "Unknown"
+
+                if category not in dumpdata.keys():
+                    dumpdata[category] = list()
+                dumpdata[category].append({
+                    "type": kind,
+                    "size (bytes)": data_size,
+                    "raw": str(buffreader.read(data_size))
+                })
+                # buffreader.seek(buffreader.tell() + data_size)
                 continue
 
             data = buffreader.read(data_size)
@@ -405,7 +456,22 @@ class ThreemonReader(abtracts.LogFileTranslator):
                 # result in lots of logspam for result server network traffic.
                 continue
 
+            category = normalized.__class__.__name__.split(".")[-1]
+            if category != "NoneType":
+                if category not in dumpdata.keys():
+                    dumpdata[category] = list()
+                dumpdata[category].append({
+                    k: str(normalized.__getattribute__(k)) for k in
+                    [i for i in dir(normalized) if not callable(i) and i[0:2] != "__"]
+                    if not callable(normalized.__getattribute__(k))
+                })
+
             if normalized:
                 yield normalized
+
+        if os.path.isfile(json_dump_filepath):
+            os.unlink(json_dump_filepath)
+        with open(json_dump_filepath, 'w') as f:
+            json.dump(dumpdata, f)
 
         translate_context.close()

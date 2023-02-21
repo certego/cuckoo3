@@ -1,0 +1,35 @@
+file {
+  name: "notification.proto"
+  package: "threemon"
+  message_type {
+    name: "Notification"
+    field {
+      name: "ts"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "type"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.NotificationType"
+    }
+  }
+  enum_type {
+    name: "NotificationType"
+    value {
+      name: "NoPids"
+      number: 0
+    }
+    value {
+      name: "Finished"
+      number: 1
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

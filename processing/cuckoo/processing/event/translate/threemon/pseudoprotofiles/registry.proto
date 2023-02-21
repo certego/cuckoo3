@@ -1,0 +1,157 @@
+file {
+  name: "registry.proto"
+  package: "threemon"
+  message_type {
+    name: "Registry"
+    field {
+      name: "ts"
+      number: 8
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "procid"
+      number: 9
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "kind"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.RegistryKind"
+    }
+    field {
+      name: "status"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "path"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "valuei"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "values"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "valued"
+      number: 7
+      label: LABEL_OPTIONAL
+      type: TYPE_BYTES
+    }
+  }
+  enum_type {
+    name: "RegistryKind"
+    value {
+      name: "CreateKey"
+      number: 0
+    }
+    value {
+      name: "CreateKeyEx"
+      number: 1
+    }
+    value {
+      name: "DeleteKey"
+      number: 2
+    }
+    value {
+      name: "EnumerateKey"
+      number: 3
+    }
+    value {
+      name: "EnumerateValueKey"
+      number: 4
+    }
+    value {
+      name: "FlushKey"
+      number: 5
+    }
+    value {
+      name: "KeyHandleClose"
+      number: 6
+    }
+    value {
+      name: "LoadKey"
+      number: 7
+    }
+    value {
+      name: "OpenKey"
+      number: 8
+    }
+    value {
+      name: "OpenKeyEx"
+      number: 9
+    }
+    value {
+      name: "QueryKey"
+      number: 10
+    }
+    value {
+      name: "QueryKeySecurity"
+      number: 11
+    }
+    value {
+      name: "QueryMultipleValueKey"
+      number: 12
+    }
+    value {
+      name: "QueryValueKey"
+      number: 13
+    }
+    value {
+      name: "RenameKey"
+      number: 14
+    }
+    value {
+      name: "SetInformationKey"
+      number: 15
+    }
+    value {
+      name: "SetKeySecurity"
+      number: 16
+    }
+    value {
+      name: "UnloadKey"
+      number: 17
+    }
+    value {
+      name: "DeleteValueKey"
+      number: 18
+    }
+    value {
+      name: "SetValueKeyInt"
+      number: 19
+    }
+    value {
+      name: "SetValueKeyStr"
+      number: 20
+    }
+    value {
+      name: "SetValueKeyDat"
+      number: 21
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

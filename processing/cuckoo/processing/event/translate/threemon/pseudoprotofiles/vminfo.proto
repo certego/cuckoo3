@@ -1,0 +1,29 @@
+file {
+  name: "vminfo.proto"
+  package: "threemon"
+  message_type {
+    name: "Vminfo"
+    field {
+      name: "computer_name"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "volume_name"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_STRING
+    }
+    field {
+      name: "volume_serial"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

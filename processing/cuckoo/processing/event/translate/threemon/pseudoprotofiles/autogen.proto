@@ -1,0 +1,7611 @@
+file {
+  name: "autogen.proto"
+  package: "threemon"
+  message_type {
+    name: "Syscall"
+    field {
+      name: "ts"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "pid"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "tid"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "nr"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.SyscallKind"
+    }
+  }
+  enum_type {
+    name: "SyscallKind"
+    value {
+      name: "NtAcceptConnectPort"
+      number: 0
+    }
+    value {
+      name: "NtAccessCheck"
+      number: 1
+    }
+    value {
+      name: "NtAccessCheckAndAuditAlarm"
+      number: 2
+    }
+    value {
+      name: "NtAccessCheckByType"
+      number: 3
+    }
+    value {
+      name: "NtAccessCheckByTypeAndAuditAlarm"
+      number: 4
+    }
+    value {
+      name: "NtAccessCheckByTypeResultList"
+      number: 5
+    }
+    value {
+      name: "NtAccessCheckByTypeResultListAndAuditAlarm"
+      number: 6
+    }
+    value {
+      name: "NtAccessCheckByTypeResultListAndAuditAlarmByHandle"
+      number: 7
+    }
+    value {
+      name: "NtAcquireCMFViewOwnership"
+      number: 8
+    }
+    value {
+      name: "NtAcquireProcessActivityReference"
+      number: 9
+    }
+    value {
+      name: "NtAddAtom"
+      number: 10
+    }
+    value {
+      name: "NtAddAtomEx"
+      number: 11
+    }
+    value {
+      name: "NtAddBootEntry"
+      number: 12
+    }
+    value {
+      name: "NtAddDriverEntry"
+      number: 13
+    }
+    value {
+      name: "NtAdjustGroupsToken"
+      number: 14
+    }
+    value {
+      name: "NtAdjustPrivilegesToken"
+      number: 15
+    }
+    value {
+      name: "NtAdjustTokenClaimsAndDeviceGroups"
+      number: 16
+    }
+    value {
+      name: "NtAlertResumeThread"
+      number: 17
+    }
+    value {
+      name: "NtAlertThread"
+      number: 18
+    }
+    value {
+      name: "NtAlertThreadByThreadId"
+      number: 19
+    }
+    value {
+      name: "NtAllocateLocallyUniqueId"
+      number: 20
+    }
+    value {
+      name: "NtAllocateReserveObject"
+      number: 21
+    }
+    value {
+      name: "NtAllocateUserPhysicalPages"
+      number: 22
+    }
+    value {
+      name: "NtAllocateUuids"
+      number: 23
+    }
+    value {
+      name: "NtAllocateVirtualMemory"
+      number: 24
+    }
+    value {
+      name: "NtAllocateVirtualMemoryEx"
+      number: 25
+    }
+    value {
+      name: "NtAlpcAcceptConnectPort"
+      number: 26
+    }
+    value {
+      name: "NtAlpcCancelMessage"
+      number: 27
+    }
+    value {
+      name: "NtAlpcConnectPort"
+      number: 28
+    }
+    value {
+      name: "NtAlpcConnectPortEx"
+      number: 29
+    }
+    value {
+      name: "NtAlpcCreatePort"
+      number: 30
+    }
+    value {
+      name: "NtAlpcCreatePortSection"
+      number: 31
+    }
+    value {
+      name: "NtAlpcCreateResourceReserve"
+      number: 32
+    }
+    value {
+      name: "NtAlpcCreateSectionView"
+      number: 33
+    }
+    value {
+      name: "NtAlpcCreateSecurityContext"
+      number: 34
+    }
+    value {
+      name: "NtAlpcDeletePortSection"
+      number: 35
+    }
+    value {
+      name: "NtAlpcDeleteResourceReserve"
+      number: 36
+    }
+    value {
+      name: "NtAlpcDeleteSectionView"
+      number: 37
+    }
+    value {
+      name: "NtAlpcDeleteSecurityContext"
+      number: 38
+    }
+    value {
+      name: "NtAlpcDisconnectPort"
+      number: 39
+    }
+    value {
+      name: "NtAlpcImpersonateClientContainerOfPort"
+      number: 40
+    }
+    value {
+      name: "NtAlpcImpersonateClientOfPort"
+      number: 41
+    }
+    value {
+      name: "NtAlpcOpenSenderProcess"
+      number: 42
+    }
+    value {
+      name: "NtAlpcOpenSenderThread"
+      number: 43
+    }
+    value {
+      name: "NtAlpcQueryInformation"
+      number: 44
+    }
+    value {
+      name: "NtAlpcQueryInformationMessage"
+      number: 45
+    }
+    value {
+      name: "NtAlpcRevokeSecurityContext"
+      number: 46
+    }
+    value {
+      name: "NtAlpcSendWaitReceivePort"
+      number: 47
+    }
+    value {
+      name: "NtAlpcSetInformation"
+      number: 48
+    }
+    value {
+      name: "NtApphelpCacheControl"
+      number: 49
+    }
+    value {
+      name: "NtAreMappedFilesTheSame"
+      number: 50
+    }
+    value {
+      name: "NtAssignProcessToJobObject"
+      number: 51
+    }
+    value {
+      name: "NtAssociateWaitCompletionPacket"
+      number: 52
+    }
+    value {
+      name: "NtCallEnclave"
+      number: 53
+    }
+    value {
+      name: "NtCallbackReturn"
+      number: 54
+    }
+    value {
+      name: "NtCancelDeviceWakeupRequest"
+      number: 55
+    }
+    value {
+      name: "NtCancelIoFile"
+      number: 56
+    }
+    value {
+      name: "NtCancelIoFileEx"
+      number: 57
+    }
+    value {
+      name: "NtCancelSynchronousIoFile"
+      number: 58
+    }
+    value {
+      name: "NtCancelTimer"
+      number: 59
+    }
+    value {
+      name: "NtCancelTimer2"
+      number: 60
+    }
+    value {
+      name: "NtCancelWaitCompletionPacket"
+      number: 61
+    }
+    value {
+      name: "NtClearAllSavepointsTransaction"
+      number: 62
+    }
+    value {
+      name: "NtClearEvent"
+      number: 63
+    }
+    value {
+      name: "NtClearSavepointTransaction"
+      number: 64
+    }
+    value {
+      name: "NtClose"
+      number: 65
+    }
+    value {
+      name: "NtCloseObjectAuditAlarm"
+      number: 66
+    }
+    value {
+      name: "NtCommitComplete"
+      number: 67
+    }
+    value {
+      name: "NtCommitEnlistment"
+      number: 68
+    }
+    value {
+      name: "NtCommitRegistryTransaction"
+      number: 69
+    }
+    value {
+      name: "NtCommitTransaction"
+      number: 70
+    }
+    value {
+      name: "NtCompactKeys"
+      number: 71
+    }
+    value {
+      name: "NtCompareObjects"
+      number: 72
+    }
+    value {
+      name: "NtCompareSigningLevels"
+      number: 73
+    }
+    value {
+      name: "NtCompareTokens"
+      number: 74
+    }
+    value {
+      name: "NtCompleteConnectPort"
+      number: 75
+    }
+    value {
+      name: "NtCompressKey"
+      number: 76
+    }
+    value {
+      name: "NtConnectPort"
+      number: 77
+    }
+    value {
+      name: "NtContinue"
+      number: 78
+    }
+    value {
+      name: "NtConvertBetweenAuxiliaryCounterAndPerformanceCounter"
+      number: 79
+    }
+    value {
+      name: "NtCreateDebugObject"
+      number: 80
+    }
+    value {
+      name: "NtCreateDirectoryObject"
+      number: 81
+    }
+    value {
+      name: "NtCreateDirectoryObjectEx"
+      number: 82
+    }
+    value {
+      name: "NtCreateEnclave"
+      number: 83
+    }
+    value {
+      name: "NtCreateEnlistment"
+      number: 84
+    }
+    value {
+      name: "NtCreateEvent"
+      number: 85
+    }
+    value {
+      name: "NtCreateEventPair"
+      number: 86
+    }
+    value {
+      name: "NtCreateFile"
+      number: 87
+    }
+    value {
+      name: "NtCreateIRTimer"
+      number: 88
+    }
+    value {
+      name: "NtCreateIoCompletion"
+      number: 89
+    }
+    value {
+      name: "NtCreateJobObject"
+      number: 90
+    }
+    value {
+      name: "NtCreateJobSet"
+      number: 91
+    }
+    value {
+      name: "NtCreateKey"
+      number: 92
+    }
+    value {
+      name: "NtCreateKeyTransacted"
+      number: 93
+    }
+    value {
+      name: "NtCreateKeyedEvent"
+      number: 94
+    }
+    value {
+      name: "NtCreateLowBoxToken"
+      number: 95
+    }
+    value {
+      name: "NtCreateMailslotFile"
+      number: 96
+    }
+    value {
+      name: "NtCreateMutant"
+      number: 97
+    }
+    value {
+      name: "NtCreateNamedPipeFile"
+      number: 98
+    }
+    value {
+      name: "NtCreatePagingFile"
+      number: 99
+    }
+    value {
+      name: "NtCreatePartition"
+      number: 100
+    }
+    value {
+      name: "NtCreatePort"
+      number: 101
+    }
+    value {
+      name: "NtCreatePrivateNamespace"
+      number: 102
+    }
+    value {
+      name: "NtCreateProcess"
+      number: 103
+    }
+    value {
+      name: "NtCreateProcessEx"
+      number: 104
+    }
+    value {
+      name: "NtCreateProfile"
+      number: 105
+    }
+    value {
+      name: "NtCreateProfileEx"
+      number: 106
+    }
+    value {
+      name: "NtCreateRegistryTransaction"
+      number: 107
+    }
+    value {
+      name: "NtCreateResourceManager"
+      number: 108
+    }
+    value {
+      name: "NtCreateSection"
+      number: 109
+    }
+    value {
+      name: "NtCreateSectionEx"
+      number: 110
+    }
+    value {
+      name: "NtCreateSemaphore"
+      number: 111
+    }
+    value {
+      name: "NtCreateSymbolicLinkObject"
+      number: 112
+    }
+    value {
+      name: "NtCreateThread"
+      number: 113
+    }
+    value {
+      name: "NtCreateThreadEx"
+      number: 114
+    }
+    value {
+      name: "NtCreateTimer"
+      number: 115
+    }
+    value {
+      name: "NtCreateTimer2"
+      number: 116
+    }
+    value {
+      name: "NtCreateToken"
+      number: 117
+    }
+    value {
+      name: "NtCreateTokenEx"
+      number: 118
+    }
+    value {
+      name: "NtCreateTransaction"
+      number: 119
+    }
+    value {
+      name: "NtCreateTransactionManager"
+      number: 120
+    }
+    value {
+      name: "NtCreateUserProcess"
+      number: 121
+    }
+    value {
+      name: "NtCreateWaitCompletionPacket"
+      number: 122
+    }
+    value {
+      name: "NtCreateWaitablePort"
+      number: 123
+    }
+    value {
+      name: "NtCreateWnfStateName"
+      number: 124
+    }
+    value {
+      name: "NtCreateWorkerFactory"
+      number: 125
+    }
+    value {
+      name: "NtDebugActiveProcess"
+      number: 126
+    }
+    value {
+      name: "NtDebugContinue"
+      number: 127
+    }
+    value {
+      name: "NtDelayExecution"
+      number: 128
+    }
+    value {
+      name: "NtDeleteAtom"
+      number: 129
+    }
+    value {
+      name: "NtDeleteBootEntry"
+      number: 130
+    }
+    value {
+      name: "NtDeleteDriverEntry"
+      number: 131
+    }
+    value {
+      name: "NtDeleteFile"
+      number: 132
+    }
+    value {
+      name: "NtDeleteKey"
+      number: 133
+    }
+    value {
+      name: "NtDeleteObjectAuditAlarm"
+      number: 134
+    }
+    value {
+      name: "NtDeletePrivateNamespace"
+      number: 135
+    }
+    value {
+      name: "NtDeleteValueKey"
+      number: 136
+    }
+    value {
+      name: "NtDeleteWnfStateData"
+      number: 137
+    }
+    value {
+      name: "NtDeleteWnfStateName"
+      number: 138
+    }
+    value {
+      name: "NtDeviceIoControlFile"
+      number: 139
+    }
+    value {
+      name: "NtDisableLastKnownGood"
+      number: 140
+    }
+    value {
+      name: "NtDisplayString"
+      number: 141
+    }
+    value {
+      name: "NtDrawText"
+      number: 142
+    }
+    value {
+      name: "NtDuplicateObject"
+      number: 143
+    }
+    value {
+      name: "NtDuplicateToken"
+      number: 144
+    }
+    value {
+      name: "NtEnableLastKnownGood"
+      number: 145
+    }
+    value {
+      name: "NtEnumerateBootEntries"
+      number: 146
+    }
+    value {
+      name: "NtEnumerateDriverEntries"
+      number: 147
+    }
+    value {
+      name: "NtEnumerateKey"
+      number: 148
+    }
+    value {
+      name: "NtEnumerateSystemEnvironmentValuesEx"
+      number: 149
+    }
+    value {
+      name: "NtEnumerateTransactionObject"
+      number: 150
+    }
+    value {
+      name: "NtEnumerateValueKey"
+      number: 151
+    }
+    value {
+      name: "NtExtendSection"
+      number: 152
+    }
+    value {
+      name: "NtFilterBootOption"
+      number: 153
+    }
+    value {
+      name: "NtFilterToken"
+      number: 154
+    }
+    value {
+      name: "NtFilterTokenEx"
+      number: 155
+    }
+    value {
+      name: "NtFindAtom"
+      number: 156
+    }
+    value {
+      name: "NtFlushBuffersFile"
+      number: 157
+    }
+    value {
+      name: "NtFlushBuffersFileEx"
+      number: 158
+    }
+    value {
+      name: "NtFlushInstallUILanguage"
+      number: 159
+    }
+    value {
+      name: "NtFlushInstructionCache"
+      number: 160
+    }
+    value {
+      name: "NtFlushKey"
+      number: 161
+    }
+    value {
+      name: "NtFlushProcessWriteBuffers"
+      number: 162
+    }
+    value {
+      name: "NtFlushVirtualMemory"
+      number: 163
+    }
+    value {
+      name: "NtFlushWriteBuffer"
+      number: 164
+    }
+    value {
+      name: "NtFreeUserPhysicalPages"
+      number: 165
+    }
+    value {
+      name: "NtFreeVirtualMemory"
+      number: 166
+    }
+    value {
+      name: "NtFreezeRegistry"
+      number: 167
+    }
+    value {
+      name: "NtFreezeTransactions"
+      number: 168
+    }
+    value {
+      name: "NtFsControlFile"
+      number: 169
+    }
+    value {
+      name: "NtGetCachedSigningLevel"
+      number: 170
+    }
+    value {
+      name: "NtGetCompleteWnfStateSubscription"
+      number: 171
+    }
+    value {
+      name: "NtGetContextThread"
+      number: 172
+    }
+    value {
+      name: "NtGetCurrentProcessorNumber"
+      number: 173
+    }
+    value {
+      name: "NtGetCurrentProcessorNumberEx"
+      number: 174
+    }
+    value {
+      name: "NtGetDevicePowerState"
+      number: 175
+    }
+    value {
+      name: "NtGetMUIRegistryInfo"
+      number: 176
+    }
+    value {
+      name: "NtGetNextProcess"
+      number: 177
+    }
+    value {
+      name: "NtGetNextThread"
+      number: 178
+    }
+    value {
+      name: "NtGetNlsSectionPtr"
+      number: 179
+    }
+    value {
+      name: "NtGetNotificationResourceManager"
+      number: 180
+    }
+    value {
+      name: "NtGetPlugPlayEvent"
+      number: 181
+    }
+    value {
+      name: "NtGetWriteWatch"
+      number: 182
+    }
+    value {
+      name: "NtImpersonateAnonymousToken"
+      number: 183
+    }
+    value {
+      name: "NtImpersonateClientOfPort"
+      number: 184
+    }
+    value {
+      name: "NtImpersonateThread"
+      number: 185
+    }
+    value {
+      name: "NtInitializeEnclave"
+      number: 186
+    }
+    value {
+      name: "NtInitializeNlsFiles"
+      number: 187
+    }
+    value {
+      name: "NtInitializeRegistry"
+      number: 188
+    }
+    value {
+      name: "NtInitiatePowerAction"
+      number: 189
+    }
+    value {
+      name: "NtIsProcessInJob"
+      number: 190
+    }
+    value {
+      name: "NtIsSystemResumeAutomatic"
+      number: 191
+    }
+    value {
+      name: "NtIsUILanguageComitted"
+      number: 192
+    }
+    value {
+      name: "NtListTransactions"
+      number: 193
+    }
+    value {
+      name: "NtListenPort"
+      number: 194
+    }
+    value {
+      name: "NtLoadDriver"
+      number: 195
+    }
+    value {
+      name: "NtLoadEnclaveData"
+      number: 196
+    }
+    value {
+      name: "NtLoadHotPatch"
+      number: 197
+    }
+    value {
+      name: "NtLoadKey"
+      number: 198
+    }
+    value {
+      name: "NtLoadKey2"
+      number: 199
+    }
+    value {
+      name: "NtLoadKeyEx"
+      number: 200
+    }
+    value {
+      name: "NtLockFile"
+      number: 201
+    }
+    value {
+      name: "NtLockProductActivationKeys"
+      number: 202
+    }
+    value {
+      name: "NtLockRegistryKey"
+      number: 203
+    }
+    value {
+      name: "NtLockVirtualMemory"
+      number: 204
+    }
+    value {
+      name: "NtMakePermanentObject"
+      number: 205
+    }
+    value {
+      name: "NtMakeTemporaryObject"
+      number: 206
+    }
+    value {
+      name: "NtManageHotPatch"
+      number: 207
+    }
+    value {
+      name: "NtManagePartition"
+      number: 208
+    }
+    value {
+      name: "NtMapCMFModule"
+      number: 209
+    }
+    value {
+      name: "NtMapUserPhysicalPages"
+      number: 210
+    }
+    value {
+      name: "NtMapUserPhysicalPagesScatter"
+      number: 211
+    }
+    value {
+      name: "NtMapViewOfSection"
+      number: 212
+    }
+    value {
+      name: "NtMapViewOfSectionEx"
+      number: 213
+    }
+    value {
+      name: "NtMarshallTransaction"
+      number: 214
+    }
+    value {
+      name: "NtModifyBootEntry"
+      number: 215
+    }
+    value {
+      name: "NtModifyDriverEntry"
+      number: 216
+    }
+    value {
+      name: "NtNotifyChangeDirectoryFile"
+      number: 217
+    }
+    value {
+      name: "NtNotifyChangeDirectoryFileEx"
+      number: 218
+    }
+    value {
+      name: "NtNotifyChangeKey"
+      number: 219
+    }
+    value {
+      name: "NtNotifyChangeMultipleKeys"
+      number: 220
+    }
+    value {
+      name: "NtNotifyChangeSession"
+      number: 221
+    }
+    value {
+      name: "NtOpenDirectoryObject"
+      number: 222
+    }
+    value {
+      name: "NtOpenEnlistment"
+      number: 223
+    }
+    value {
+      name: "NtOpenEvent"
+      number: 224
+    }
+    value {
+      name: "NtOpenEventPair"
+      number: 225
+    }
+    value {
+      name: "NtOpenFile"
+      number: 226
+    }
+    value {
+      name: "NtOpenIoCompletion"
+      number: 227
+    }
+    value {
+      name: "NtOpenJobObject"
+      number: 228
+    }
+    value {
+      name: "NtOpenKey"
+      number: 229
+    }
+    value {
+      name: "NtOpenKeyEx"
+      number: 230
+    }
+    value {
+      name: "NtOpenKeyTransacted"
+      number: 231
+    }
+    value {
+      name: "NtOpenKeyTransactedEx"
+      number: 232
+    }
+    value {
+      name: "NtOpenKeyedEvent"
+      number: 233
+    }
+    value {
+      name: "NtOpenMutant"
+      number: 234
+    }
+    value {
+      name: "NtOpenObjectAuditAlarm"
+      number: 235
+    }
+    value {
+      name: "NtOpenPartition"
+      number: 236
+    }
+    value {
+      name: "NtOpenPrivateNamespace"
+      number: 237
+    }
+    value {
+      name: "NtOpenProcess"
+      number: 238
+    }
+    value {
+      name: "NtOpenProcessToken"
+      number: 239
+    }
+    value {
+      name: "NtOpenProcessTokenEx"
+      number: 240
+    }
+    value {
+      name: "NtOpenRegistryTransaction"
+      number: 241
+    }
+    value {
+      name: "NtOpenResourceManager"
+      number: 242
+    }
+    value {
+      name: "NtOpenSection"
+      number: 243
+    }
+    value {
+      name: "NtOpenSemaphore"
+      number: 244
+    }
+    value {
+      name: "NtOpenSession"
+      number: 245
+    }
+    value {
+      name: "NtOpenSymbolicLinkObject"
+      number: 246
+    }
+    value {
+      name: "NtOpenThread"
+      number: 247
+    }
+    value {
+      name: "NtOpenThreadToken"
+      number: 248
+    }
+    value {
+      name: "NtOpenThreadTokenEx"
+      number: 249
+    }
+    value {
+      name: "NtOpenTimer"
+      number: 250
+    }
+    value {
+      name: "NtOpenTransaction"
+      number: 251
+    }
+    value {
+      name: "NtOpenTransactionManager"
+      number: 252
+    }
+    value {
+      name: "NtPlugPlayControl"
+      number: 253
+    }
+    value {
+      name: "NtPowerInformation"
+      number: 254
+    }
+    value {
+      name: "NtPrePrepareComplete"
+      number: 255
+    }
+    value {
+      name: "NtPrePrepareEnlistment"
+      number: 256
+    }
+    value {
+      name: "NtPrepareComplete"
+      number: 257
+    }
+    value {
+      name: "NtPrepareEnlistment"
+      number: 258
+    }
+    value {
+      name: "NtPrivilegeCheck"
+      number: 259
+    }
+    value {
+      name: "NtPrivilegeObjectAuditAlarm"
+      number: 260
+    }
+    value {
+      name: "NtPrivilegedServiceAuditAlarm"
+      number: 261
+    }
+    value {
+      name: "NtPropagationComplete"
+      number: 262
+    }
+    value {
+      name: "NtPropagationFailed"
+      number: 263
+    }
+    value {
+      name: "NtProtectVirtualMemory"
+      number: 264
+    }
+    value {
+      name: "NtPullTransaction"
+      number: 265
+    }
+    value {
+      name: "NtPulseEvent"
+      number: 266
+    }
+    value {
+      name: "NtQueryAttributesFile"
+      number: 267
+    }
+    value {
+      name: "NtQueryAuxiliaryCounterFrequency"
+      number: 268
+    }
+    value {
+      name: "NtQueryBootEntryOrder"
+      number: 269
+    }
+    value {
+      name: "NtQueryBootOptions"
+      number: 270
+    }
+    value {
+      name: "NtQueryDebugFilterState"
+      number: 271
+    }
+    value {
+      name: "NtQueryDefaultLocale"
+      number: 272
+    }
+    value {
+      name: "NtQueryDefaultUILanguage"
+      number: 273
+    }
+    value {
+      name: "NtQueryDirectoryFile"
+      number: 274
+    }
+    value {
+      name: "NtQueryDirectoryFileEx"
+      number: 275
+    }
+    value {
+      name: "NtQueryDirectoryObject"
+      number: 276
+    }
+    value {
+      name: "NtQueryDriverEntryOrder"
+      number: 277
+    }
+    value {
+      name: "NtQueryEaFile"
+      number: 278
+    }
+    value {
+      name: "NtQueryEvent"
+      number: 279
+    }
+    value {
+      name: "NtQueryFullAttributesFile"
+      number: 280
+    }
+    value {
+      name: "NtQueryInformationAtom"
+      number: 281
+    }
+    value {
+      name: "NtQueryInformationByName"
+      number: 282
+    }
+    value {
+      name: "NtQueryInformationEnlistment"
+      number: 283
+    }
+    value {
+      name: "NtQueryInformationFile"
+      number: 284
+    }
+    value {
+      name: "NtQueryInformationJobObject"
+      number: 285
+    }
+    value {
+      name: "NtQueryInformationPort"
+      number: 286
+    }
+    value {
+      name: "NtQueryInformationProcess"
+      number: 287
+    }
+    value {
+      name: "NtQueryInformationResourceManager"
+      number: 288
+    }
+    value {
+      name: "NtQueryInformationThread"
+      number: 289
+    }
+    value {
+      name: "NtQueryInformationToken"
+      number: 290
+    }
+    value {
+      name: "NtQueryInformationTransaction"
+      number: 291
+    }
+    value {
+      name: "NtQueryInformationTransactionManager"
+      number: 292
+    }
+    value {
+      name: "NtQueryInformationWorkerFactory"
+      number: 293
+    }
+    value {
+      name: "NtQueryInstallUILanguage"
+      number: 294
+    }
+    value {
+      name: "NtQueryIntervalProfile"
+      number: 295
+    }
+    value {
+      name: "NtQueryIoCompletion"
+      number: 296
+    }
+    value {
+      name: "NtQueryKey"
+      number: 297
+    }
+    value {
+      name: "NtQueryLicenseValue"
+      number: 298
+    }
+    value {
+      name: "NtQueryMultipleValueKey"
+      number: 299
+    }
+    value {
+      name: "NtQueryMutant"
+      number: 300
+    }
+    value {
+      name: "NtQueryObject"
+      number: 301
+    }
+    value {
+      name: "NtQueryOpenSubKeys"
+      number: 302
+    }
+    value {
+      name: "NtQueryOpenSubKeysEx"
+      number: 303
+    }
+    value {
+      name: "NtQueryPerformanceCounter"
+      number: 304
+    }
+    value {
+      name: "NtQueryPortInformationProcess"
+      number: 305
+    }
+    value {
+      name: "NtQueryQuotaInformationFile"
+      number: 306
+    }
+    value {
+      name: "NtQuerySection"
+      number: 307
+    }
+    value {
+      name: "NtQuerySecurityAttributesToken"
+      number: 308
+    }
+    value {
+      name: "NtQuerySecurityObject"
+      number: 309
+    }
+    value {
+      name: "NtQuerySecurityPolicy"
+      number: 310
+    }
+    value {
+      name: "NtQuerySemaphore"
+      number: 311
+    }
+    value {
+      name: "NtQuerySymbolicLinkObject"
+      number: 312
+    }
+    value {
+      name: "NtQuerySystemEnvironmentValue"
+      number: 313
+    }
+    value {
+      name: "NtQuerySystemEnvironmentValueEx"
+      number: 314
+    }
+    value {
+      name: "NtQuerySystemInformation"
+      number: 315
+    }
+    value {
+      name: "NtQuerySystemInformationEx"
+      number: 316
+    }
+    value {
+      name: "NtQuerySystemTime"
+      number: 317
+    }
+    value {
+      name: "NtQueryTimer"
+      number: 318
+    }
+    value {
+      name: "NtQueryTimerResolution"
+      number: 319
+    }
+    value {
+      name: "NtQueryValueKey"
+      number: 320
+    }
+    value {
+      name: "NtQueryVirtualMemory"
+      number: 321
+    }
+    value {
+      name: "NtQueryVolumeInformationFile"
+      number: 322
+    }
+    value {
+      name: "NtQueryWnfStateData"
+      number: 323
+    }
+    value {
+      name: "NtQueryWnfStateNameInformation"
+      number: 324
+    }
+    value {
+      name: "NtQueueApcThread"
+      number: 325
+    }
+    value {
+      name: "NtQueueApcThreadEx"
+      number: 326
+    }
+    value {
+      name: "NtRaiseException"
+      number: 327
+    }
+    value {
+      name: "NtRaiseHardError"
+      number: 328
+    }
+    value {
+      name: "NtReadFile"
+      number: 329
+    }
+    value {
+      name: "NtReadFileScatter"
+      number: 330
+    }
+    value {
+      name: "NtReadOnlyEnlistment"
+      number: 331
+    }
+    value {
+      name: "NtReadRequestData"
+      number: 332
+    }
+    value {
+      name: "NtReadVirtualMemory"
+      number: 333
+    }
+    value {
+      name: "NtRecoverEnlistment"
+      number: 334
+    }
+    value {
+      name: "NtRecoverResourceManager"
+      number: 335
+    }
+    value {
+      name: "NtRecoverTransactionManager"
+      number: 336
+    }
+    value {
+      name: "NtRegisterProtocolAddressInformation"
+      number: 337
+    }
+    value {
+      name: "NtRegisterThreadTerminatePort"
+      number: 338
+    }
+    value {
+      name: "NtReleaseCMFViewOwnership"
+      number: 339
+    }
+    value {
+      name: "NtReleaseKeyedEvent"
+      number: 340
+    }
+    value {
+      name: "NtReleaseMutant"
+      number: 341
+    }
+    value {
+      name: "NtReleaseSemaphore"
+      number: 342
+    }
+    value {
+      name: "NtReleaseWorkerFactoryWorker"
+      number: 343
+    }
+    value {
+      name: "NtRemoveIoCompletion"
+      number: 344
+    }
+    value {
+      name: "NtRemoveIoCompletionEx"
+      number: 345
+    }
+    value {
+      name: "NtRemoveProcessDebug"
+      number: 346
+    }
+    value {
+      name: "NtRenameKey"
+      number: 347
+    }
+    value {
+      name: "NtRenameTransactionManager"
+      number: 348
+    }
+    value {
+      name: "NtReplaceKey"
+      number: 349
+    }
+    value {
+      name: "NtReplacePartitionUnit"
+      number: 350
+    }
+    value {
+      name: "NtReplyPort"
+      number: 351
+    }
+    value {
+      name: "NtReplyWaitReceivePort"
+      number: 352
+    }
+    value {
+      name: "NtReplyWaitReceivePortEx"
+      number: 353
+    }
+    value {
+      name: "NtReplyWaitReplyPort"
+      number: 354
+    }
+    value {
+      name: "NtRequestDeviceWakeup"
+      number: 355
+    }
+    value {
+      name: "NtRequestPort"
+      number: 356
+    }
+    value {
+      name: "NtRequestWaitReplyPort"
+      number: 357
+    }
+    value {
+      name: "NtRequestWakeupLatency"
+      number: 358
+    }
+    value {
+      name: "NtResetEvent"
+      number: 359
+    }
+    value {
+      name: "NtResetWriteWatch"
+      number: 360
+    }
+    value {
+      name: "NtRestoreKey"
+      number: 361
+    }
+    value {
+      name: "NtResumeProcess"
+      number: 362
+    }
+    value {
+      name: "NtResumeThread"
+      number: 363
+    }
+    value {
+      name: "NtRevertContainerImpersonation"
+      number: 364
+    }
+    value {
+      name: "NtRollbackComplete"
+      number: 365
+    }
+    value {
+      name: "NtRollbackEnlistment"
+      number: 366
+    }
+    value {
+      name: "NtRollbackRegistryTransaction"
+      number: 367
+    }
+    value {
+      name: "NtRollbackSavepointTransaction"
+      number: 368
+    }
+    value {
+      name: "NtRollbackTransaction"
+      number: 369
+    }
+    value {
+      name: "NtRollforwardTransactionManager"
+      number: 370
+    }
+    value {
+      name: "NtSaveKey"
+      number: 371
+    }
+    value {
+      name: "NtSaveKeyEx"
+      number: 372
+    }
+    value {
+      name: "NtSaveMergedKeys"
+      number: 373
+    }
+    value {
+      name: "NtSavepointComplete"
+      number: 374
+    }
+    value {
+      name: "NtSavepointTransaction"
+      number: 375
+    }
+    value {
+      name: "NtSecureConnectPort"
+      number: 376
+    }
+    value {
+      name: "NtSerializeBoot"
+      number: 377
+    }
+    value {
+      name: "NtSetBootEntryOrder"
+      number: 378
+    }
+    value {
+      name: "NtSetBootOptions"
+      number: 379
+    }
+    value {
+      name: "NtSetCachedSigningLevel"
+      number: 380
+    }
+    value {
+      name: "NtSetCachedSigningLevel2"
+      number: 381
+    }
+    value {
+      name: "NtSetContextThread"
+      number: 382
+    }
+    value {
+      name: "NtSetDebugFilterState"
+      number: 383
+    }
+    value {
+      name: "NtSetDefaultHardErrorPort"
+      number: 384
+    }
+    value {
+      name: "NtSetDefaultLocale"
+      number: 385
+    }
+    value {
+      name: "NtSetDefaultUILanguage"
+      number: 386
+    }
+    value {
+      name: "NtSetDriverEntryOrder"
+      number: 387
+    }
+    value {
+      name: "NtSetEaFile"
+      number: 388
+    }
+    value {
+      name: "NtSetEvent"
+      number: 389
+    }
+    value {
+      name: "NtSetEventBoostPriority"
+      number: 390
+    }
+    value {
+      name: "NtSetHighEventPair"
+      number: 391
+    }
+    value {
+      name: "NtSetHighWaitLowEventPair"
+      number: 392
+    }
+    value {
+      name: "NtSetIRTimer"
+      number: 393
+    }
+    value {
+      name: "NtSetInformationDebugObject"
+      number: 394
+    }
+    value {
+      name: "NtSetInformationEnlistment"
+      number: 395
+    }
+    value {
+      name: "NtSetInformationFile"
+      number: 396
+    }
+    value {
+      name: "NtSetInformationJobObject"
+      number: 397
+    }
+    value {
+      name: "NtSetInformationKey"
+      number: 398
+    }
+    value {
+      name: "NtSetInformationObject"
+      number: 399
+    }
+    value {
+      name: "NtSetInformationProcess"
+      number: 400
+    }
+    value {
+      name: "NtSetInformationResourceManager"
+      number: 401
+    }
+    value {
+      name: "NtSetInformationSymbolicLink"
+      number: 402
+    }
+    value {
+      name: "NtSetInformationThread"
+      number: 403
+    }
+    value {
+      name: "NtSetInformationToken"
+      number: 404
+    }
+    value {
+      name: "NtSetInformationTransaction"
+      number: 405
+    }
+    value {
+      name: "NtSetInformationTransactionManager"
+      number: 406
+    }
+    value {
+      name: "NtSetInformationVirtualMemory"
+      number: 407
+    }
+    value {
+      name: "NtSetInformationWorkerFactory"
+      number: 408
+    }
+    value {
+      name: "NtSetIntervalProfile"
+      number: 409
+    }
+    value {
+      name: "NtSetIoCompletion"
+      number: 410
+    }
+    value {
+      name: "NtSetIoCompletionEx"
+      number: 411
+    }
+    value {
+      name: "NtSetLdtEntries"
+      number: 412
+    }
+    value {
+      name: "NtSetLowEventPair"
+      number: 413
+    }
+    value {
+      name: "NtSetLowWaitHighEventPair"
+      number: 414
+    }
+    value {
+      name: "NtSetQuotaInformationFile"
+      number: 415
+    }
+    value {
+      name: "NtSetSecurityObject"
+      number: 416
+    }
+    value {
+      name: "NtSetSystemEnvironmentValue"
+      number: 417
+    }
+    value {
+      name: "NtSetSystemEnvironmentValueEx"
+      number: 418
+    }
+    value {
+      name: "NtSetSystemInformation"
+      number: 419
+    }
+    value {
+      name: "NtSetSystemPowerState"
+      number: 420
+    }
+    value {
+      name: "NtSetSystemTime"
+      number: 421
+    }
+    value {
+      name: "NtSetThreadExecutionState"
+      number: 422
+    }
+    value {
+      name: "NtSetTimer"
+      number: 423
+    }
+    value {
+      name: "NtSetTimer2"
+      number: 424
+    }
+    value {
+      name: "NtSetTimerEx"
+      number: 425
+    }
+    value {
+      name: "NtSetTimerResolution"
+      number: 426
+    }
+    value {
+      name: "NtSetUuidSeed"
+      number: 427
+    }
+    value {
+      name: "NtSetValueKey"
+      number: 428
+    }
+    value {
+      name: "NtSetVolumeInformationFile"
+      number: 429
+    }
+    value {
+      name: "NtSetWnfProcessNotificationEvent"
+      number: 430
+    }
+    value {
+      name: "NtShutdownSystem"
+      number: 431
+    }
+    value {
+      name: "NtShutdownWorkerFactory"
+      number: 432
+    }
+    value {
+      name: "NtSignalAndWaitForSingleObject"
+      number: 433
+    }
+    value {
+      name: "NtSinglePhaseReject"
+      number: 434
+    }
+    value {
+      name: "NtStartProfile"
+      number: 435
+    }
+    value {
+      name: "NtStartTm"
+      number: 436
+    }
+    value {
+      name: "NtStopProfile"
+      number: 437
+    }
+    value {
+      name: "NtSubscribeWnfStateChange"
+      number: 438
+    }
+    value {
+      name: "NtSuspendProcess"
+      number: 439
+    }
+    value {
+      name: "NtSuspendThread"
+      number: 440
+    }
+    value {
+      name: "NtSystemDebugControl"
+      number: 441
+    }
+    value {
+      name: "NtTerminateEnclave"
+      number: 442
+    }
+    value {
+      name: "NtTerminateJobObject"
+      number: 443
+    }
+    value {
+      name: "NtTerminateProcess"
+      number: 444
+    }
+    value {
+      name: "NtTerminateThread"
+      number: 445
+    }
+    value {
+      name: "NtTestAlert"
+      number: 446
+    }
+    value {
+      name: "NtThawRegistry"
+      number: 447
+    }
+    value {
+      name: "NtThawTransactions"
+      number: 448
+    }
+    value {
+      name: "NtTraceControl"
+      number: 449
+    }
+    value {
+      name: "NtTraceEvent"
+      number: 450
+    }
+    value {
+      name: "NtTranslateFilePath"
+      number: 451
+    }
+    value {
+      name: "NtUmsThreadYield"
+      number: 452
+    }
+    value {
+      name: "NtUnloadDriver"
+      number: 453
+    }
+    value {
+      name: "NtUnloadKey"
+      number: 454
+    }
+    value {
+      name: "NtUnloadKey2"
+      number: 455
+    }
+    value {
+      name: "NtUnloadKeyEx"
+      number: 456
+    }
+    value {
+      name: "NtUnlockFile"
+      number: 457
+    }
+    value {
+      name: "NtUnlockVirtualMemory"
+      number: 458
+    }
+    value {
+      name: "NtUnmapViewOfSection"
+      number: 459
+    }
+    value {
+      name: "NtUnmapViewOfSectionEx"
+      number: 460
+    }
+    value {
+      name: "NtUnsubscribeWnfStateChange"
+      number: 461
+    }
+    value {
+      name: "NtUpdateWnfStateData"
+      number: 462
+    }
+    value {
+      name: "NtVdmControl"
+      number: 463
+    }
+    value {
+      name: "NtWaitForAlertByThreadId"
+      number: 464
+    }
+    value {
+      name: "NtWaitForDebugEvent"
+      number: 465
+    }
+    value {
+      name: "NtWaitForKeyedEvent"
+      number: 466
+    }
+    value {
+      name: "NtWaitForMultipleObjects"
+      number: 467
+    }
+    value {
+      name: "NtWaitForMultipleObjects32"
+      number: 468
+    }
+    value {
+      name: "NtWaitForSingleObject"
+      number: 469
+    }
+    value {
+      name: "NtWaitForWnfNotifications"
+      number: 470
+    }
+    value {
+      name: "NtWaitForWorkViaWorkerFactory"
+      number: 471
+    }
+    value {
+      name: "NtWaitHighEventPair"
+      number: 472
+    }
+    value {
+      name: "NtWaitLowEventPair"
+      number: 473
+    }
+    value {
+      name: "NtWorkerFactoryWorkerReady"
+      number: 474
+    }
+    value {
+      name: "NtWriteFile"
+      number: 475
+    }
+    value {
+      name: "NtWriteFileGather"
+      number: 476
+    }
+    value {
+      name: "NtWriteRequestData"
+      number: 477
+    }
+    value {
+      name: "NtWriteVirtualMemory"
+      number: 478
+    }
+    value {
+      name: "NtYieldExecution"
+      number: 479
+    }
+    value {
+      name: "NtBindCompositionSurface"
+      number: 480
+    }
+    value {
+      name: "NtCloseCompositionInputSink"
+      number: 481
+    }
+    value {
+      name: "NtCompositionInputThread"
+      number: 482
+    }
+    value {
+      name: "NtCompositionSetDropTarget"
+      number: 483
+    }
+    value {
+      name: "NtConfigureInputSpace"
+      number: 484
+    }
+    value {
+      name: "NtCreateCompositionInputSink"
+      number: 485
+    }
+    value {
+      name: "NtCreateCompositionSurfaceHandle"
+      number: 486
+    }
+    value {
+      name: "NtCreateImplicitCompositionInputSink"
+      number: 487
+    }
+    value {
+      name: "NtDCompositionAddCrossDeviceVisualChild"
+      number: 488
+    }
+    value {
+      name: "NtDCompositionAddVisualChild"
+      number: 489
+    }
+    value {
+      name: "NtDCompositionAttachMouseWheelToHwnd"
+      number: 490
+    }
+    value {
+      name: "NtDCompositionBeginFrame"
+      number: 491
+    }
+    value {
+      name: "NtDCompositionCapturePointer"
+      number: 492
+    }
+    value {
+      name: "NtDCompositionCommitChannel"
+      number: 493
+    }
+    value {
+      name: "NtDCompositionCommitSynchronizationObject"
+      number: 494
+    }
+    value {
+      name: "NtDCompositionConfirmFrame"
+      number: 495
+    }
+    value {
+      name: "NtDCompositionConnectPipe"
+      number: 496
+    }
+    value {
+      name: "NtDCompositionCreateAndBindSharedSection"
+      number: 497
+    }
+    value {
+      name: "NtDCompositionCreateChannel"
+      number: 498
+    }
+    value {
+      name: "NtDCompositionCreateConnection"
+      number: 499
+    }
+    value {
+      name: "NtDCompositionCreateConnectionContext"
+      number: 500
+    }
+    value {
+      name: "NtDCompositionCreateDwmChannel"
+      number: 501
+    }
+    value {
+      name: "NtDCompositionCreateResource"
+      number: 502
+    }
+    value {
+      name: "NtDCompositionCreateSharedVisualHandle"
+      number: 503
+    }
+    value {
+      name: "NtDCompositionCreateSynchronizationObject"
+      number: 504
+    }
+    value {
+      name: "NtDCompositionCurrentBatchId"
+      number: 505
+    }
+    value {
+      name: "NtDCompositionDestroyChannel"
+      number: 506
+    }
+    value {
+      name: "NtDCompositionDestroyConnection"
+      number: 507
+    }
+    value {
+      name: "NtDCompositionDestroyConnectionContext"
+      number: 508
+    }
+    value {
+      name: "NtDCompositionDiscardFrame"
+      number: 509
+    }
+    value {
+      name: "NtDCompositionDuplicateHandleToProcess"
+      number: 510
+    }
+    value {
+      name: "NtDCompositionDuplicateSwapchainHandleToDwm"
+      number: 511
+    }
+    value {
+      name: "NtDCompositionDwmSyncFlush"
+      number: 512
+    }
+    value {
+      name: "NtDCompositionEnableDDASupport"
+      number: 513
+    }
+    value {
+      name: "NtDCompositionEnableMMCSS"
+      number: 514
+    }
+    value {
+      name: "NtDCompositionGetAnimationTime"
+      number: 515
+    }
+    value {
+      name: "NtDCompositionGetBatchId"
+      number: 516
+    }
+    value {
+      name: "NtDCompositionGetChannels"
+      number: 517
+    }
+    value {
+      name: "NtDCompositionGetConnectionBatch"
+      number: 518
+    }
+    value {
+      name: "NtDCompositionGetConnectionContextBatch"
+      number: 519
+    }
+    value {
+      name: "NtDCompositionGetDeletedResources"
+      number: 520
+    }
+    value {
+      name: "NtDCompositionGetFrameLegacyTokens"
+      number: 521
+    }
+    value {
+      name: "NtDCompositionGetFrameStatistics"
+      number: 522
+    }
+    value {
+      name: "NtDCompositionGetFrameSurfaceUpdates"
+      number: 523
+    }
+    value {
+      name: "NtDCompositionGetMaterialProperty"
+      number: 524
+    }
+    value {
+      name: "NtDCompositionOpenSharedResource"
+      number: 525
+    }
+    value {
+      name: "NtDCompositionOpenSharedResourceHandle"
+      number: 526
+    }
+    value {
+      name: "NtDCompositionProcessChannelBatchBuffer"
+      number: 527
+    }
+    value {
+      name: "NtDCompositionReferenceSharedResourceOnDwmChannel"
+      number: 528
+    }
+    value {
+      name: "NtDCompositionRegisterThumbnailVisual"
+      number: 529
+    }
+    value {
+      name: "NtDCompositionRegisterVirtualDesktopVisual"
+      number: 530
+    }
+    value {
+      name: "NtDCompositionReleaseAllResources"
+      number: 531
+    }
+    value {
+      name: "NtDCompositionReleaseResource"
+      number: 532
+    }
+    value {
+      name: "NtDCompositionRemoveCrossDeviceVisualChild"
+      number: 533
+    }
+    value {
+      name: "NtDCompositionRemoveVisualChild"
+      number: 534
+    }
+    value {
+      name: "NtDCompositionReplaceVisualChildren"
+      number: 535
+    }
+    value {
+      name: "NtDCompositionRetireFrame"
+      number: 536
+    }
+    value {
+      name: "NtDCompositionSetChannelCallbackId"
+      number: 537
+    }
+    value {
+      name: "NtDCompositionSetChannelCommitCompletionEvent"
+      number: 538
+    }
+    value {
+      name: "NtDCompositionSetChannelConnectionId"
+      number: 539
+    }
+    value {
+      name: "NtDCompositionSetChildRootVisual"
+      number: 540
+    }
+    value {
+      name: "NtDCompositionSetDebugCounter"
+      number: 541
+    }
+    value {
+      name: "NtDCompositionSetMaterialProperty"
+      number: 542
+    }
+    value {
+      name: "NtDCompositionSetResourceAnimationProperty"
+      number: 543
+    }
+    value {
+      name: "NtDCompositionSetResourceBufferProperty"
+      number: 544
+    }
+    value {
+      name: "NtDCompositionSetResourceCallbackId"
+      number: 545
+    }
+    value {
+      name: "NtDCompositionSetResourceDeletedNotificationTag"
+      number: 546
+    }
+    value {
+      name: "NtDCompositionSetResourceFloatProperty"
+      number: 547
+    }
+    value {
+      name: "NtDCompositionSetResourceHandleProperty"
+      number: 548
+    }
+    value {
+      name: "NtDCompositionSetResourceIntegerProperty"
+      number: 549
+    }
+    value {
+      name: "NtDCompositionSetResourceReferenceArrayProperty"
+      number: 550
+    }
+    value {
+      name: "NtDCompositionSetResourceReferenceProperty"
+      number: 551
+    }
+    value {
+      name: "NtDCompositionSetVisualInputSink"
+      number: 552
+    }
+    value {
+      name: "NtDCompositionSignalGpuFence"
+      number: 553
+    }
+    value {
+      name: "NtDCompositionSubmitDWMBatch"
+      number: 554
+    }
+    value {
+      name: "NtDCompositionSuspendAnimations"
+      number: 555
+    }
+    value {
+      name: "NtDCompositionSynchronize"
+      number: 556
+    }
+    value {
+      name: "NtDCompositionTelemetryAnimationScenarioBegin"
+      number: 557
+    }
+    value {
+      name: "NtDCompositionTelemetryAnimationScenarioReference"
+      number: 558
+    }
+    value {
+      name: "NtDCompositionTelemetryAnimationScenarioUnreference"
+      number: 559
+    }
+    value {
+      name: "NtDCompositionTelemetrySetApplicationId"
+      number: 560
+    }
+    value {
+      name: "NtDCompositionTelemetryTouchInteractionBegin"
+      number: 561
+    }
+    value {
+      name: "NtDCompositionTelemetryTouchInteractionEnd"
+      number: 562
+    }
+    value {
+      name: "NtDCompositionTelemetryTouchInteractionUpdate"
+      number: 563
+    }
+    value {
+      name: "NtDCompositionUpdatePointerCapture"
+      number: 564
+    }
+    value {
+      name: "NtDCompositionValidateAndReferenceSystemVisualForHwndTarget"
+      number: 565
+    }
+    value {
+      name: "NtDCompositionWaitForChannel"
+      number: 566
+    }
+    value {
+      name: "NtDWMBindCursorToOutputConfig"
+      number: 567
+    }
+    value {
+      name: "NtDWMCommitInputSystemOutputConfig"
+      number: 568
+    }
+    value {
+      name: "NtDWMSetCursorOrientation"
+      number: 569
+    }
+    value {
+      name: "NtDWMSetInputSystemOutputConfig"
+      number: 570
+    }
+    value {
+      name: "NtDesktopCaptureBits"
+      number: 571
+    }
+    value {
+      name: "NtDuplicateCompositionInputSink"
+      number: 572
+    }
+    value {
+      name: "NtDxgkCreateTrackedWorkload"
+      number: 573
+    }
+    value {
+      name: "NtDxgkDestroyTrackedWorkload"
+      number: 574
+    }
+    value {
+      name: "NtDxgkEndTrackedWorkload"
+      number: 575
+    }
+    value {
+      name: "NtDxgkGetAvailableTrackedWorkloadIndex"
+      number: 576
+    }
+    value {
+      name: "NtDxgkGetProcessList"
+      number: 577
+    }
+    value {
+      name: "NtDxgkGetTrackedWorkloadStatistics"
+      number: 578
+    }
+    value {
+      name: "NtDxgkRegisterVailProcess"
+      number: 579
+    }
+    value {
+      name: "NtDxgkResetTrackedWorkload"
+      number: 580
+    }
+    value {
+      name: "NtDxgkSubmitPresentBltToHwQueue"
+      number: 581
+    }
+    value {
+      name: "NtDxgkSubmitPresentToHwQueue"
+      number: 582
+    }
+    value {
+      name: "NtDxgkUpdateTrackedWorkload"
+      number: 583
+    }
+    value {
+      name: "NtDxgkVailConnect"
+      number: 584
+    }
+    value {
+      name: "NtDxgkVailDisconnect"
+      number: 585
+    }
+    value {
+      name: "NtDxgkVailPromoteCompositionSurface"
+      number: 586
+    }
+    value {
+      name: "NtEnableOneCoreTransformMode"
+      number: 587
+    }
+    value {
+      name: "NtFlipObjectAddContent"
+      number: 588
+    }
+    value {
+      name: "NtFlipObjectAddPoolBuffer"
+      number: 589
+    }
+    value {
+      name: "NtFlipObjectConsumerAcquirePresent"
+      number: 590
+    }
+    value {
+      name: "NtFlipObjectConsumerAdjustUsageReference"
+      number: 591
+    }
+    value {
+      name: "NtFlipObjectConsumerBeginProcessPresent"
+      number: 592
+    }
+    value {
+      name: "NtFlipObjectConsumerEndProcessPresent"
+      number: 593
+    }
+    value {
+      name: "NtFlipObjectConsumerPostMessage"
+      number: 594
+    }
+    value {
+      name: "NtFlipObjectConsumerQueryBufferInfo"
+      number: 595
+    }
+    value {
+      name: "NtFlipObjectCreate"
+      number: 596
+    }
+    value {
+      name: "NtFlipObjectDisconnectEndpoint"
+      number: 597
+    }
+    value {
+      name: "NtFlipObjectOpen"
+      number: 598
+    }
+    value {
+      name: "NtFlipObjectPresentCancel"
+      number: 599
+    }
+    value {
+      name: "NtFlipObjectQueryBufferAvailableEvent"
+      number: 600
+    }
+    value {
+      name: "NtFlipObjectQueryEndpointConnected"
+      number: 601
+    }
+    value {
+      name: "NtFlipObjectQueryNextMessageToProducer"
+      number: 602
+    }
+    value {
+      name: "NtFlipObjectReadNextMessageToProducer"
+      number: 603
+    }
+    value {
+      name: "NtFlipObjectRemoveContent"
+      number: 604
+    }
+    value {
+      name: "NtFlipObjectRemovePoolBuffer"
+      number: 605
+    }
+    value {
+      name: "NtFlipObjectSetContent"
+      number: 606
+    }
+    value {
+      name: "NtGdiAbortDoc"
+      number: 607
+    }
+    value {
+      name: "NtGdiAbortPath"
+      number: 608
+    }
+    value {
+      name: "NtGdiAddEmbFontToDC"
+      number: 609
+    }
+    value {
+      name: "NtGdiAddFontMemResourceEx"
+      number: 610
+    }
+    value {
+      name: "NtGdiAddFontResourceW"
+      number: 611
+    }
+    value {
+      name: "NtGdiAddInitialFonts"
+      number: 612
+    }
+    value {
+      name: "NtGdiAddRemoteFontToDC"
+      number: 613
+    }
+    value {
+      name: "NtGdiAddRemoteMMInstanceToDC"
+      number: 614
+    }
+    value {
+      name: "NtGdiAlphaBlend"
+      number: 615
+    }
+    value {
+      name: "NtGdiAngleArc"
+      number: 616
+    }
+    value {
+      name: "NtGdiAnyLinkedFonts"
+      number: 617
+    }
+    value {
+      name: "NtGdiArcInternal"
+      number: 618
+    }
+    value {
+      name: "NtGdiBRUSHOBJ_DeleteRbrush"
+      number: 619
+    }
+    value {
+      name: "NtGdiBRUSHOBJ_hGetColorTransform"
+      number: 620
+    }
+    value {
+      name: "NtGdiBRUSHOBJ_pvAllocRbrush"
+      number: 621
+    }
+    value {
+      name: "NtGdiBRUSHOBJ_pvGetRbrush"
+      number: 622
+    }
+    value {
+      name: "NtGdiBRUSHOBJ_ulGetBrushColor"
+      number: 623
+    }
+    value {
+      name: "NtGdiBeginGdiRendering"
+      number: 624
+    }
+    value {
+      name: "NtGdiBeginPath"
+      number: 625
+    }
+    value {
+      name: "NtGdiBitBlt"
+      number: 626
+    }
+    value {
+      name: "NtGdiCLIPOBJ_bEnum"
+      number: 627
+    }
+    value {
+      name: "NtGdiCLIPOBJ_cEnumStart"
+      number: 628
+    }
+    value {
+      name: "NtGdiCLIPOBJ_ppoGetPath"
+      number: 629
+    }
+    value {
+      name: "NtGdiCancelDC"
+      number: 630
+    }
+    value {
+      name: "NtGdiChangeGhostFont"
+      number: 631
+    }
+    value {
+      name: "NtGdiCheckBitmapBits"
+      number: 632
+    }
+    value {
+      name: "NtGdiClearBitmapAttributes"
+      number: 633
+    }
+    value {
+      name: "NtGdiClearBrushAttributes"
+      number: 634
+    }
+    value {
+      name: "NtGdiCloseFigure"
+      number: 635
+    }
+    value {
+      name: "NtGdiColorCorrectPalette"
+      number: 636
+    }
+    value {
+      name: "NtGdiCombineRgn"
+      number: 637
+    }
+    value {
+      name: "NtGdiCombineTransform"
+      number: 638
+    }
+    value {
+      name: "NtGdiComputeXformCoefficients"
+      number: 639
+    }
+    value {
+      name: "NtGdiConfigureOPMProtectedOutput"
+      number: 640
+    }
+    value {
+      name: "NtGdiConsoleTextOut"
+      number: 641
+    }
+    value {
+      name: "NtGdiConvertMetafileRect"
+      number: 642
+    }
+    value {
+      name: "NtGdiCreateBitmap"
+      number: 643
+    }
+    value {
+      name: "NtGdiCreateBitmapFromDxSurface"
+      number: 644
+    }
+    value {
+      name: "NtGdiCreateBitmapFromDxSurface2"
+      number: 645
+    }
+    value {
+      name: "NtGdiCreateClientObj"
+      number: 646
+    }
+    value {
+      name: "NtGdiCreateColorSpace"
+      number: 647
+    }
+    value {
+      name: "NtGdiCreateColorTransform"
+      number: 648
+    }
+    value {
+      name: "NtGdiCreateCompatibleBitmap"
+      number: 649
+    }
+    value {
+      name: "NtGdiCreateCompatibleDC"
+      number: 650
+    }
+    value {
+      name: "NtGdiCreateDIBBrush"
+      number: 651
+    }
+    value {
+      name: "NtGdiCreateDIBSection"
+      number: 652
+    }
+    value {
+      name: "NtGdiCreateDIBitmapInternal"
+      number: 653
+    }
+    value {
+      name: "NtGdiCreateEllipticRgn"
+      number: 654
+    }
+    value {
+      name: "NtGdiCreateHalftonePalette"
+      number: 655
+    }
+    value {
+      name: "NtGdiCreateHatchBrushInternal"
+      number: 656
+    }
+    value {
+      name: "NtGdiCreateMetafileDC"
+      number: 657
+    }
+    value {
+      name: "NtGdiCreateOPMProtectedOutput"
+      number: 658
+    }
+    value {
+      name: "NtGdiCreateOPMProtectedOutputs"
+      number: 659
+    }
+    value {
+      name: "NtGdiCreatePaletteInternal"
+      number: 660
+    }
+    value {
+      name: "NtGdiCreatePatternBrushInternal"
+      number: 661
+    }
+    value {
+      name: "NtGdiCreatePen"
+      number: 662
+    }
+    value {
+      name: "NtGdiCreateRectRgn"
+      number: 663
+    }
+    value {
+      name: "NtGdiCreateRoundRectRgn"
+      number: 664
+    }
+    value {
+      name: "NtGdiCreateServerMetaFile"
+      number: 665
+    }
+    value {
+      name: "NtGdiCreateSessionMappedDIBSection"
+      number: 666
+    }
+    value {
+      name: "NtGdiCreateSolidBrush"
+      number: 667
+    }
+    value {
+      name: "NtGdiD3dContextCreate"
+      number: 668
+    }
+    value {
+      name: "NtGdiD3dContextDestroy"
+      number: 669
+    }
+    value {
+      name: "NtGdiD3dContextDestroyAll"
+      number: 670
+    }
+    value {
+      name: "NtGdiD3dDrawPrimitives2"
+      number: 671
+    }
+    value {
+      name: "NtGdiD3dValidateTextureStageState"
+      number: 672
+    }
+    value {
+      name: "NtGdiDDCCIGetCapabilitiesString"
+      number: 673
+    }
+    value {
+      name: "NtGdiDDCCIGetCapabilitiesStringLength"
+      number: 674
+    }
+    value {
+      name: "NtGdiDDCCIGetTimingReport"
+      number: 675
+    }
+    value {
+      name: "NtGdiDDCCIGetVCPFeature"
+      number: 676
+    }
+    value {
+      name: "NtGdiDDCCISaveCurrentSettings"
+      number: 677
+    }
+    value {
+      name: "NtGdiDDCCISetVCPFeature"
+      number: 678
+    }
+    value {
+      name: "NtGdiDdAddAttachedSurface"
+      number: 679
+    }
+    value {
+      name: "NtGdiDdAlphaBlt"
+      number: 680
+    }
+    value {
+      name: "NtGdiDdAttachSurface"
+      number: 681
+    }
+    value {
+      name: "NtGdiDdBeginMoCompFrame"
+      number: 682
+    }
+    value {
+      name: "NtGdiDdBlt"
+      number: 683
+    }
+    value {
+      name: "NtGdiDdCanCreateD3DBuffer"
+      number: 684
+    }
+    value {
+      name: "NtGdiDdCanCreateSurface"
+      number: 685
+    }
+    value {
+      name: "NtGdiDdColorControl"
+      number: 686
+    }
+    value {
+      name: "NtGdiDdCreateD3DBuffer"
+      number: 687
+    }
+    value {
+      name: "NtGdiDdCreateDirectDrawObject"
+      number: 688
+    }
+    value {
+      name: "NtGdiDdCreateFullscreenSprite"
+      number: 689
+    }
+    value {
+      name: "NtGdiDdCreateMoComp"
+      number: 690
+    }
+    value {
+      name: "NtGdiDdCreateSurface"
+      number: 691
+    }
+    value {
+      name: "NtGdiDdCreateSurfaceEx"
+      number: 692
+    }
+    value {
+      name: "NtGdiDdCreateSurfaceObject"
+      number: 693
+    }
+    value {
+      name: "NtGdiDdDDIAbandonSwapChain"
+      number: 694
+    }
+    value {
+      name: "NtGdiDdDDIAcquireKeyedMutex"
+      number: 695
+    }
+    value {
+      name: "NtGdiDdDDIAcquireKeyedMutex2"
+      number: 696
+    }
+    value {
+      name: "NtGdiDdDDIAcquireSwapChain"
+      number: 697
+    }
+    value {
+      name: "NtGdiDdDDIAddSurfaceToSwapChain"
+      number: 698
+    }
+    value {
+      name: "NtGdiDdDDIAdjustFullscreenGamma"
+      number: 699
+    }
+    value {
+      name: "NtGdiDdDDICacheHybridQueryValue"
+      number: 700
+    }
+    value {
+      name: "NtGdiDdDDIChangeVideoMemoryReservation"
+      number: 701
+    }
+    value {
+      name: "NtGdiDdDDICheckExclusiveOwnership"
+      number: 702
+    }
+    value {
+      name: "NtGdiDdDDICheckMonitorPowerState"
+      number: 703
+    }
+    value {
+      name: "NtGdiDdDDICheckMultiPlaneOverlaySupport"
+      number: 704
+    }
+    value {
+      name: "NtGdiDdDDICheckMultiPlaneOverlaySupport2"
+      number: 705
+    }
+    value {
+      name: "NtGdiDdDDICheckMultiPlaneOverlaySupport3"
+      number: 706
+    }
+    value {
+      name: "NtGdiDdDDICheckOcclusion"
+      number: 707
+    }
+    value {
+      name: "NtGdiDdDDICheckSharedResourceAccess"
+      number: 708
+    }
+    value {
+      name: "NtGdiDdDDICheckVidPnExclusiveOwnership"
+      number: 709
+    }
+    value {
+      name: "NtGdiDdDDICloseAdapter"
+      number: 710
+    }
+    value {
+      name: "NtGdiDdDDIConfigureSharedResource"
+      number: 711
+    }
+    value {
+      name: "NtGdiDdDDICreateAllocation"
+      number: 712
+    }
+    value {
+      name: "NtGdiDdDDICreateBundleObject"
+      number: 713
+    }
+    value {
+      name: "NtGdiDdDDICreateContext"
+      number: 714
+    }
+    value {
+      name: "NtGdiDdDDICreateContextVirtual"
+      number: 715
+    }
+    value {
+      name: "NtGdiDdDDICreateDCFromMemory"
+      number: 716
+    }
+    value {
+      name: "NtGdiDdDDICreateDevice"
+      number: 717
+    }
+    value {
+      name: "NtGdiDdDDICreateHwContext"
+      number: 718
+    }
+    value {
+      name: "NtGdiDdDDICreateHwQueue"
+      number: 719
+    }
+    value {
+      name: "NtGdiDdDDICreateKeyedMutex"
+      number: 720
+    }
+    value {
+      name: "NtGdiDdDDICreateKeyedMutex2"
+      number: 721
+    }
+    value {
+      name: "NtGdiDdDDICreateOutputDupl"
+      number: 722
+    }
+    value {
+      name: "NtGdiDdDDICreateOverlay"
+      number: 723
+    }
+    value {
+      name: "NtGdiDdDDICreatePagingQueue"
+      number: 724
+    }
+    value {
+      name: "NtGdiDdDDICreateProtectedSession"
+      number: 725
+    }
+    value {
+      name: "NtGdiDdDDICreateSwapChain"
+      number: 726
+    }
+    value {
+      name: "NtGdiDdDDICreateSynchronizationObject"
+      number: 727
+    }
+    value {
+      name: "NtGdiDdDDIDDisplayEnum"
+      number: 728
+    }
+    value {
+      name: "NtGdiDdDDIDestroyAllocation"
+      number: 729
+    }
+    value {
+      name: "NtGdiDdDDIDestroyAllocation2"
+      number: 730
+    }
+    value {
+      name: "NtGdiDdDDIDestroyContext"
+      number: 731
+    }
+    value {
+      name: "NtGdiDdDDIDestroyDCFromMemory"
+      number: 732
+    }
+    value {
+      name: "NtGdiDdDDIDestroyDevice"
+      number: 733
+    }
+    value {
+      name: "NtGdiDdDDIDestroyHwContext"
+      number: 734
+    }
+    value {
+      name: "NtGdiDdDDIDestroyHwQueue"
+      number: 735
+    }
+    value {
+      name: "NtGdiDdDDIDestroyKeyedMutex"
+      number: 736
+    }
+    value {
+      name: "NtGdiDdDDIDestroyOutputDupl"
+      number: 737
+    }
+    value {
+      name: "NtGdiDdDDIDestroyOverlay"
+      number: 738
+    }
+    value {
+      name: "NtGdiDdDDIDestroyPagingQueue"
+      number: 739
+    }
+    value {
+      name: "NtGdiDdDDIDestroyProtectedSession"
+      number: 740
+    }
+    value {
+      name: "NtGdiDdDDIDestroySynchronizationObject"
+      number: 741
+    }
+    value {
+      name: "NtGdiDdDDIDispMgrCreate"
+      number: 742
+    }
+    value {
+      name: "NtGdiDdDDIDispMgrSourceOperation"
+      number: 743
+    }
+    value {
+      name: "NtGdiDdDDIDispMgrTargetOperation"
+      number: 744
+    }
+    value {
+      name: "NtGdiDdDDIEnumAdapters"
+      number: 745
+    }
+    value {
+      name: "NtGdiDdDDIEnumAdapters2"
+      number: 746
+    }
+    value {
+      name: "NtGdiDdDDIEscape"
+      number: 747
+    }
+    value {
+      name: "NtGdiDdDDIEvict"
+      number: 748
+    }
+    value {
+      name: "NtGdiDdDDIExtractBundleObject"
+      number: 749
+    }
+    value {
+      name: "NtGdiDdDDIFlipOverlay"
+      number: 750
+    }
+    value {
+      name: "NtGdiDdDDIFlushHeapTransitions"
+      number: 751
+    }
+    value {
+      name: "NtGdiDdDDIFreeGpuVirtualAddress"
+      number: 752
+    }
+    value {
+      name: "NtGdiDdDDIGetAllocationPriority"
+      number: 753
+    }
+    value {
+      name: "NtGdiDdDDIGetCachedHybridQueryValue"
+      number: 754
+    }
+    value {
+      name: "NtGdiDdDDIGetContextInProcessSchedulingPriority"
+      number: 755
+    }
+    value {
+      name: "NtGdiDdDDIGetContextSchedulingPriority"
+      number: 756
+    }
+    value {
+      name: "NtGdiDdDDIGetDWMVerticalBlankEvent"
+      number: 757
+    }
+    value {
+      name: "NtGdiDdDDIGetDeviceState"
+      number: 758
+    }
+    value {
+      name: "NtGdiDdDDIGetDisplayModeList"
+      number: 759
+    }
+    value {
+      name: "NtGdiDdDDIGetMemoryBudgetTarget"
+      number: 760
+    }
+    value {
+      name: "NtGdiDdDDIGetMultiPlaneOverlayCaps"
+      number: 761
+    }
+    value {
+      name: "NtGdiDdDDIGetMultisampleMethodList"
+      number: 762
+    }
+    value {
+      name: "NtGdiDdDDIGetOverlayState"
+      number: 763
+    }
+    value {
+      name: "NtGdiDdDDIGetPostCompositionCaps"
+      number: 764
+    }
+    value {
+      name: "NtGdiDdDDIGetPresentHistory"
+      number: 765
+    }
+    value {
+      name: "NtGdiDdDDIGetPresentQueueEvent"
+      number: 766
+    }
+    value {
+      name: "NtGdiDdDDIGetProcessDeviceLostSupport"
+      number: 767
+    }
+    value {
+      name: "NtGdiDdDDIGetProcessDeviceRemovalSupport"
+      number: 768
+    }
+    value {
+      name: "NtGdiDdDDIGetProcessSchedulingPriorityBand"
+      number: 769
+    }
+    value {
+      name: "NtGdiDdDDIGetProcessSchedulingPriorityClass"
+      number: 770
+    }
+    value {
+      name: "NtGdiDdDDIGetResourcePresentPrivateDriverData"
+      number: 771
+    }
+    value {
+      name: "NtGdiDdDDIGetRuntimeData"
+      number: 772
+    }
+    value {
+      name: "NtGdiDdDDIGetScanLine"
+      number: 773
+    }
+    value {
+      name: "NtGdiDdDDIGetSetSwapChainMetadata"
+      number: 774
+    }
+    value {
+      name: "NtGdiDdDDIGetSharedPrimaryHandle"
+      number: 775
+    }
+    value {
+      name: "NtGdiDdDDIGetSharedResourceAdapterLuid"
+      number: 776
+    }
+    value {
+      name: "NtGdiDdDDIGetSharedResourceAdapterLuidFlipManager"
+      number: 777
+    }
+    value {
+      name: "NtGdiDdDDIGetYieldPercentage"
+      number: 778
+    }
+    value {
+      name: "NtGdiDdDDIInvalidateActiveVidPn"
+      number: 779
+    }
+    value {
+      name: "NtGdiDdDDIInvalidateCache"
+      number: 780
+    }
+    value {
+      name: "NtGdiDdDDILock"
+      number: 781
+    }
+    value {
+      name: "NtGdiDdDDILock2"
+      number: 782
+    }
+    value {
+      name: "NtGdiDdDDIMakeResident"
+      number: 783
+    }
+    value {
+      name: "NtGdiDdDDIMapGpuVirtualAddress"
+      number: 784
+    }
+    value {
+      name: "NtGdiDdDDIMarkDeviceAsError"
+      number: 785
+    }
+    value {
+      name: "NtGdiDdDDINetDispGetNextChunkInfo"
+      number: 786
+    }
+    value {
+      name: "NtGdiDdDDINetDispQueryMiracastDisplayDeviceStatus"
+      number: 787
+    }
+    value {
+      name: "NtGdiDdDDINetDispQueryMiracastDisplayDeviceSupport"
+      number: 788
+    }
+    value {
+      name: "NtGdiDdDDINetDispStartMiracastDisplayDevice"
+      number: 789
+    }
+    value {
+      name: "NtGdiDdDDINetDispStartMiracastDisplayDeviceEx"
+      number: 790
+    }
+    value {
+      name: "NtGdiDdDDINetDispStopMiracastDisplayDevice"
+      number: 791
+    }
+    value {
+      name: "NtGdiDdDDINetDispStopSessions"
+      number: 792
+    }
+    value {
+      name: "NtGdiDdDDIOfferAllocations"
+      number: 793
+    }
+    value {
+      name: "NtGdiDdDDIOpenAdapterFromDeviceName"
+      number: 794
+    }
+    value {
+      name: "NtGdiDdDDIOpenAdapterFromHdc"
+      number: 795
+    }
+    value {
+      name: "NtGdiDdDDIOpenAdapterFromLuid"
+      number: 796
+    }
+    value {
+      name: "NtGdiDdDDIOpenBundleObjectNtHandleFromName"
+      number: 797
+    }
+    value {
+      name: "NtGdiDdDDIOpenKeyedMutex"
+      number: 798
+    }
+    value {
+      name: "NtGdiDdDDIOpenKeyedMutex2"
+      number: 799
+    }
+    value {
+      name: "NtGdiDdDDIOpenKeyedMutexFromNtHandle"
+      number: 800
+    }
+    value {
+      name: "NtGdiDdDDIOpenNtHandleFromName"
+      number: 801
+    }
+    value {
+      name: "NtGdiDdDDIOpenProtectedSessionFromNtHandle"
+      number: 802
+    }
+    value {
+      name: "NtGdiDdDDIOpenResource"
+      number: 803
+    }
+    value {
+      name: "NtGdiDdDDIOpenResourceFromNtHandle"
+      number: 804
+    }
+    value {
+      name: "NtGdiDdDDIOpenSwapChain"
+      number: 805
+    }
+    value {
+      name: "NtGdiDdDDIOpenSyncObjectFromNtHandle"
+      number: 806
+    }
+    value {
+      name: "NtGdiDdDDIOpenSyncObjectFromNtHandle2"
+      number: 807
+    }
+    value {
+      name: "NtGdiDdDDIOpenSyncObjectNtHandleFromName"
+      number: 808
+    }
+    value {
+      name: "NtGdiDdDDIOpenSynchronizationObject"
+      number: 809
+    }
+    value {
+      name: "NtGdiDdDDIOutputDuplGetFrameInfo"
+      number: 810
+    }
+    value {
+      name: "NtGdiDdDDIOutputDuplGetMetaData"
+      number: 811
+    }
+    value {
+      name: "NtGdiDdDDIOutputDuplGetPointerShapeData"
+      number: 812
+    }
+    value {
+      name: "NtGdiDdDDIOutputDuplPresent"
+      number: 813
+    }
+    value {
+      name: "NtGdiDdDDIOutputDuplReleaseFrame"
+      number: 814
+    }
+    value {
+      name: "NtGdiDdDDIPinDirectFlipResources"
+      number: 815
+    }
+    value {
+      name: "NtGdiDdDDIPollDisplayChildren"
+      number: 816
+    }
+    value {
+      name: "NtGdiDdDDIPresent"
+      number: 817
+    }
+    value {
+      name: "NtGdiDdDDIPresentMultiPlaneOverlay"
+      number: 818
+    }
+    value {
+      name: "NtGdiDdDDIPresentMultiPlaneOverlay2"
+      number: 819
+    }
+    value {
+      name: "NtGdiDdDDIPresentMultiPlaneOverlay3"
+      number: 820
+    }
+    value {
+      name: "NtGdiDdDDIPresentRedirected"
+      number: 821
+    }
+    value {
+      name: "NtGdiDdDDIQueryAdapterInfo"
+      number: 822
+    }
+    value {
+      name: "NtGdiDdDDIQueryAllocationResidency"
+      number: 823
+    }
+    value {
+      name: "NtGdiDdDDIQueryClockCalibration"
+      number: 824
+    }
+    value {
+      name: "NtGdiDdDDIQueryFSEBlock"
+      number: 825
+    }
+    value {
+      name: "NtGdiDdDDIQueryProcessOfferInfo"
+      number: 826
+    }
+    value {
+      name: "NtGdiDdDDIQueryProtectedSessionInfoFromNtHandle"
+      number: 827
+    }
+    value {
+      name: "NtGdiDdDDIQueryProtectedSessionStatus"
+      number: 828
+    }
+    value {
+      name: "NtGdiDdDDIQueryRemoteVidPnSourceFromGdiDisplayName"
+      number: 829
+    }
+    value {
+      name: "NtGdiDdDDIQueryResourceInfo"
+      number: 830
+    }
+    value {
+      name: "NtGdiDdDDIQueryResourceInfoFromNtHandle"
+      number: 831
+    }
+    value {
+      name: "NtGdiDdDDIQueryStatistics"
+      number: 832
+    }
+    value {
+      name: "NtGdiDdDDIQueryVidPnExclusiveOwnership"
+      number: 833
+    }
+    value {
+      name: "NtGdiDdDDIQueryVideoMemoryInfo"
+      number: 834
+    }
+    value {
+      name: "NtGdiDdDDIReclaimAllocations"
+      number: 835
+    }
+    value {
+      name: "NtGdiDdDDIReclaimAllocations2"
+      number: 836
+    }
+    value {
+      name: "NtGdiDdDDIReleaseKeyedMutex"
+      number: 837
+    }
+    value {
+      name: "NtGdiDdDDIReleaseKeyedMutex2"
+      number: 838
+    }
+    value {
+      name: "NtGdiDdDDIReleaseProcessVidPnSourceOwners"
+      number: 839
+    }
+    value {
+      name: "NtGdiDdDDIReleaseSwapChain"
+      number: 840
+    }
+    value {
+      name: "NtGdiDdDDIRemoveSurfaceFromSwapChain"
+      number: 841
+    }
+    value {
+      name: "NtGdiDdDDIRender"
+      number: 842
+    }
+    value {
+      name: "NtGdiDdDDIReserveGpuVirtualAddress"
+      number: 843
+    }
+    value {
+      name: "NtGdiDdDDISetAllocationPriority"
+      number: 844
+    }
+    value {
+      name: "NtGdiDdDDISetContextInProcessSchedulingPriority"
+      number: 845
+    }
+    value {
+      name: "NtGdiDdDDISetContextSchedulingPriority"
+      number: 846
+    }
+    value {
+      name: "NtGdiDdDDISetDeviceLostSupport"
+      number: 847
+    }
+    value {
+      name: "NtGdiDdDDISetDisplayMode"
+      number: 848
+    }
+    value {
+      name: "NtGdiDdDDISetDisplayPrivateDriverFormat"
+      number: 849
+    }
+    value {
+      name: "NtGdiDdDDISetDodIndirectSwapchain"
+      number: 850
+    }
+    value {
+      name: "NtGdiDdDDISetFSEBlock"
+      number: 851
+    }
+    value {
+      name: "NtGdiDdDDISetGammaRamp"
+      number: 852
+    }
+    value {
+      name: "NtGdiDdDDISetHwProtectionTeardownRecovery"
+      number: 853
+    }
+    value {
+      name: "NtGdiDdDDISetMemoryBudgetTarget"
+      number: 854
+    }
+    value {
+      name: "NtGdiDdDDISetMonitorColorSpaceTransform"
+      number: 855
+    }
+    value {
+      name: "NtGdiDdDDISetProcessDeviceRemovalSupport"
+      number: 856
+    }
+    value {
+      name: "NtGdiDdDDISetProcessSchedulingPriorityBand"
+      number: 857
+    }
+    value {
+      name: "NtGdiDdDDISetProcessSchedulingPriorityClass"
+      number: 858
+    }
+    value {
+      name: "NtGdiDdDDISetQueuedLimit"
+      number: 859
+    }
+    value {
+      name: "NtGdiDdDDISetStablePowerState"
+      number: 860
+    }
+    value {
+      name: "NtGdiDdDDISetStereoEnabled"
+      number: 861
+    }
+    value {
+      name: "NtGdiDdDDISetSyncRefreshCountWaitTarget"
+      number: 862
+    }
+    value {
+      name: "NtGdiDdDDISetVidPnSourceHwProtection"
+      number: 863
+    }
+    value {
+      name: "NtGdiDdDDISetVidPnSourceOwner"
+      number: 864
+    }
+    value {
+      name: "NtGdiDdDDISetVidPnSourceOwner1"
+      number: 865
+    }
+    value {
+      name: "NtGdiDdDDISetYieldPercentage"
+      number: 866
+    }
+    value {
+      name: "NtGdiDdDDIShareObjects"
+      number: 867
+    }
+    value {
+      name: "NtGdiDdDDISharedPrimaryLockNotification"
+      number: 868
+    }
+    value {
+      name: "NtGdiDdDDISharedPrimaryUnLockNotification"
+      number: 869
+    }
+    value {
+      name: "NtGdiDdDDISignalSynchronizationObject"
+      number: 870
+    }
+    value {
+      name: "NtGdiDdDDISignalSynchronizationObjectFromCpu"
+      number: 871
+    }
+    value {
+      name: "NtGdiDdDDISignalSynchronizationObjectFromGpu"
+      number: 872
+    }
+    value {
+      name: "NtGdiDdDDISignalSynchronizationObjectFromGpu2"
+      number: 873
+    }
+    value {
+      name: "NtGdiDdDDISubmitCommand"
+      number: 874
+    }
+    value {
+      name: "NtGdiDdDDISubmitCommandToHwQueue"
+      number: 875
+    }
+    value {
+      name: "NtGdiDdDDISubmitSignalSyncObjectsToHwQueue"
+      number: 876
+    }
+    value {
+      name: "NtGdiDdDDISubmitWaitForSyncObjectsToHwQueue"
+      number: 877
+    }
+    value {
+      name: "NtGdiDdDDITrimProcessCommitment"
+      number: 878
+    }
+    value {
+      name: "NtGdiDdDDIUnOrderedPresentSwapChain"
+      number: 879
+    }
+    value {
+      name: "NtGdiDdDDIUnlock"
+      number: 880
+    }
+    value {
+      name: "NtGdiDdDDIUnlock2"
+      number: 881
+    }
+    value {
+      name: "NtGdiDdDDIUnpinDirectFlipResources"
+      number: 882
+    }
+    value {
+      name: "NtGdiDdDDIUpdateAllocationProperty"
+      number: 883
+    }
+    value {
+      name: "NtGdiDdDDIUpdateGpuVirtualAddress"
+      number: 884
+    }
+    value {
+      name: "NtGdiDdDDIUpdateOverlay"
+      number: 885
+    }
+    value {
+      name: "NtGdiDdDDIWaitForIdle"
+      number: 886
+    }
+    value {
+      name: "NtGdiDdDDIWaitForSynchronizationObject"
+      number: 887
+    }
+    value {
+      name: "NtGdiDdDDIWaitForSynchronizationObjectFromCpu"
+      number: 888
+    }
+    value {
+      name: "NtGdiDdDDIWaitForSynchronizationObjectFromGpu"
+      number: 889
+    }
+    value {
+      name: "NtGdiDdDDIWaitForVerticalBlankEvent"
+      number: 890
+    }
+    value {
+      name: "NtGdiDdDDIWaitForVerticalBlankEvent2"
+      number: 891
+    }
+    value {
+      name: "NtGdiDdDeleteDirectDrawObject"
+      number: 892
+    }
+    value {
+      name: "NtGdiDdDeleteSurfaceObject"
+      number: 893
+    }
+    value {
+      name: "NtGdiDdDestroyD3DBuffer"
+      number: 894
+    }
+    value {
+      name: "NtGdiDdDestroyFullscreenSprite"
+      number: 895
+    }
+    value {
+      name: "NtGdiDdDestroyMoComp"
+      number: 896
+    }
+    value {
+      name: "NtGdiDdDestroySurface"
+      number: 897
+    }
+    value {
+      name: "NtGdiDdEndMoCompFrame"
+      number: 898
+    }
+    value {
+      name: "NtGdiDdFlip"
+      number: 899
+    }
+    value {
+      name: "NtGdiDdFlipToGDISurface"
+      number: 900
+    }
+    value {
+      name: "NtGdiDdGetAvailDriverMemory"
+      number: 901
+    }
+    value {
+      name: "NtGdiDdGetBltStatus"
+      number: 902
+    }
+    value {
+      name: "NtGdiDdGetDC"
+      number: 903
+    }
+    value {
+      name: "NtGdiDdGetDriverInfo"
+      number: 904
+    }
+    value {
+      name: "NtGdiDdGetDriverState"
+      number: 905
+    }
+    value {
+      name: "NtGdiDdGetDxHandle"
+      number: 906
+    }
+    value {
+      name: "NtGdiDdGetFlipStatus"
+      number: 907
+    }
+    value {
+      name: "NtGdiDdGetInternalMoCompInfo"
+      number: 908
+    }
+    value {
+      name: "NtGdiDdGetMoCompBuffInfo"
+      number: 909
+    }
+    value {
+      name: "NtGdiDdGetMoCompFormats"
+      number: 910
+    }
+    value {
+      name: "NtGdiDdGetMoCompGuids"
+      number: 911
+    }
+    value {
+      name: "NtGdiDdGetScanLine"
+      number: 912
+    }
+    value {
+      name: "NtGdiDdLock"
+      number: 913
+    }
+    value {
+      name: "NtGdiDdLockD3D"
+      number: 914
+    }
+    value {
+      name: "NtGdiDdNotifyFullscreenSpriteUpdate"
+      number: 915
+    }
+    value {
+      name: "NtGdiDdQueryDirectDrawObject"
+      number: 916
+    }
+    value {
+      name: "NtGdiDdQueryMoCompStatus"
+      number: 917
+    }
+    value {
+      name: "NtGdiDdQueryVisRgnUniqueness"
+      number: 918
+    }
+    value {
+      name: "NtGdiDdReenableDirectDrawObject"
+      number: 919
+    }
+    value {
+      name: "NtGdiDdReleaseDC"
+      number: 920
+    }
+    value {
+      name: "NtGdiDdRenderMoComp"
+      number: 921
+    }
+    value {
+      name: "NtGdiDdResetVisrgn"
+      number: 922
+    }
+    value {
+      name: "NtGdiDdSetColorKey"
+      number: 923
+    }
+    value {
+      name: "NtGdiDdSetExclusiveMode"
+      number: 924
+    }
+    value {
+      name: "NtGdiDdSetGammaRamp"
+      number: 925
+    }
+    value {
+      name: "NtGdiDdSetOverlayPosition"
+      number: 926
+    }
+    value {
+      name: "NtGdiDdUnattachSurface"
+      number: 927
+    }
+    value {
+      name: "NtGdiDdUnlock"
+      number: 928
+    }
+    value {
+      name: "NtGdiDdUnlockD3D"
+      number: 929
+    }
+    value {
+      name: "NtGdiDdUpdateOverlay"
+      number: 930
+    }
+    value {
+      name: "NtGdiDdWaitForVerticalBlank"
+      number: 931
+    }
+    value {
+      name: "NtGdiDeleteClientObj"
+      number: 932
+    }
+    value {
+      name: "NtGdiDeleteColorSpace"
+      number: 933
+    }
+    value {
+      name: "NtGdiDeleteColorTransform"
+      number: 934
+    }
+    value {
+      name: "NtGdiDeleteObjectApp"
+      number: 935
+    }
+    value {
+      name: "NtGdiDescribePixelFormat"
+      number: 936
+    }
+    value {
+      name: "NtGdiDestroyOPMProtectedOutput"
+      number: 937
+    }
+    value {
+      name: "NtGdiDestroyPhysicalMonitor"
+      number: 938
+    }
+    value {
+      name: "NtGdiDoBanding"
+      number: 939
+    }
+    value {
+      name: "NtGdiDoPalette"
+      number: 940
+    }
+    value {
+      name: "NtGdiDrawEscape"
+      number: 941
+    }
+    value {
+      name: "NtGdiDrawStream"
+      number: 942
+    }
+    value {
+      name: "NtGdiDvpAcquireNotification"
+      number: 943
+    }
+    value {
+      name: "NtGdiDvpCanCreateVideoPort"
+      number: 944
+    }
+    value {
+      name: "NtGdiDvpColorControl"
+      number: 945
+    }
+    value {
+      name: "NtGdiDvpCreateVideoPort"
+      number: 946
+    }
+    value {
+      name: "NtGdiDvpDestroyVideoPort"
+      number: 947
+    }
+    value {
+      name: "NtGdiDvpFlipVideoPort"
+      number: 948
+    }
+    value {
+      name: "NtGdiDvpGetVideoPortBandwidth"
+      number: 949
+    }
+    value {
+      name: "NtGdiDvpGetVideoPortConnectInfo"
+      number: 950
+    }
+    value {
+      name: "NtGdiDvpGetVideoPortField"
+      number: 951
+    }
+    value {
+      name: "NtGdiDvpGetVideoPortFlipStatus"
+      number: 952
+    }
+    value {
+      name: "NtGdiDvpGetVideoPortInputFormats"
+      number: 953
+    }
+    value {
+      name: "NtGdiDvpGetVideoPortLine"
+      number: 954
+    }
+    value {
+      name: "NtGdiDvpGetVideoPortOutputFormats"
+      number: 955
+    }
+    value {
+      name: "NtGdiDvpGetVideoSignalStatus"
+      number: 956
+    }
+    value {
+      name: "NtGdiDvpReleaseNotification"
+      number: 957
+    }
+    value {
+      name: "NtGdiDvpUpdateVideoPort"
+      number: 958
+    }
+    value {
+      name: "NtGdiDvpWaitForVideoPortSync"
+      number: 959
+    }
+    value {
+      name: "NtGdiDwmCreatedBitmapRemotingOutput"
+      number: 960
+    }
+    value {
+      name: "NtGdiDwmGetDirtyRgn"
+      number: 961
+    }
+    value {
+      name: "NtGdiDwmGetSurfaceData"
+      number: 962
+    }
+    value {
+      name: "NtGdiDxgGenericThunk"
+      number: 963
+    }
+    value {
+      name: "NtGdiEllipse"
+      number: 964
+    }
+    value {
+      name: "NtGdiEnableEudc"
+      number: 965
+    }
+    value {
+      name: "NtGdiEndDoc"
+      number: 966
+    }
+    value {
+      name: "NtGdiEndGdiRendering"
+      number: 967
+    }
+    value {
+      name: "NtGdiEndPage"
+      number: 968
+    }
+    value {
+      name: "NtGdiEndPath"
+      number: 969
+    }
+    value {
+      name: "NtGdiEngAlphaBlend"
+      number: 970
+    }
+    value {
+      name: "NtGdiEngAssociateSurface"
+      number: 971
+    }
+    value {
+      name: "NtGdiEngBitBlt"
+      number: 972
+    }
+    value {
+      name: "NtGdiEngCheckAbort"
+      number: 973
+    }
+    value {
+      name: "NtGdiEngComputeGlyphSet"
+      number: 974
+    }
+    value {
+      name: "NtGdiEngCopyBits"
+      number: 975
+    }
+    value {
+      name: "NtGdiEngCreateBitmap"
+      number: 976
+    }
+    value {
+      name: "NtGdiEngCreateClip"
+      number: 977
+    }
+    value {
+      name: "NtGdiEngCreateDeviceBitmap"
+      number: 978
+    }
+    value {
+      name: "NtGdiEngCreateDeviceSurface"
+      number: 979
+    }
+    value {
+      name: "NtGdiEngCreatePalette"
+      number: 980
+    }
+    value {
+      name: "NtGdiEngDeleteClip"
+      number: 981
+    }
+    value {
+      name: "NtGdiEngDeletePalette"
+      number: 982
+    }
+    value {
+      name: "NtGdiEngDeletePath"
+      number: 983
+    }
+    value {
+      name: "NtGdiEngDeleteSurface"
+      number: 984
+    }
+    value {
+      name: "NtGdiEngEraseSurface"
+      number: 985
+    }
+    value {
+      name: "NtGdiEngFillPath"
+      number: 986
+    }
+    value {
+      name: "NtGdiEngGradientFill"
+      number: 987
+    }
+    value {
+      name: "NtGdiEngLineTo"
+      number: 988
+    }
+    value {
+      name: "NtGdiEngLockSurface"
+      number: 989
+    }
+    value {
+      name: "NtGdiEngMarkBandingSurface"
+      number: 990
+    }
+    value {
+      name: "NtGdiEngPaint"
+      number: 991
+    }
+    value {
+      name: "NtGdiEngPlgBlt"
+      number: 992
+    }
+    value {
+      name: "NtGdiEngStretchBlt"
+      number: 993
+    }
+    value {
+      name: "NtGdiEngStretchBltROP"
+      number: 994
+    }
+    value {
+      name: "NtGdiEngStrokeAndFillPath"
+      number: 995
+    }
+    value {
+      name: "NtGdiEngStrokePath"
+      number: 996
+    }
+    value {
+      name: "NtGdiEngTextOut"
+      number: 997
+    }
+    value {
+      name: "NtGdiEngTransparentBlt"
+      number: 998
+    }
+    value {
+      name: "NtGdiEngUnlockSurface"
+      number: 999
+    }
+    value {
+      name: "NtGdiEnsureDpiDepDefaultGuiFontForPlateau"
+      number: 1000
+    }
+    value {
+      name: "NtGdiEnumFontChunk"
+      number: 1001
+    }
+    value {
+      name: "NtGdiEnumFontClose"
+      number: 1002
+    }
+    value {
+      name: "NtGdiEnumFontOpen"
+      number: 1003
+    }
+    value {
+      name: "NtGdiEnumFonts"
+      number: 1004
+    }
+    value {
+      name: "NtGdiEnumObjects"
+      number: 1005
+    }
+    value {
+      name: "NtGdiEqualRgn"
+      number: 1006
+    }
+    value {
+      name: "NtGdiEudcLoadUnloadLink"
+      number: 1007
+    }
+    value {
+      name: "NtGdiExcludeClipRect"
+      number: 1008
+    }
+    value {
+      name: "NtGdiExtCreatePen"
+      number: 1009
+    }
+    value {
+      name: "NtGdiExtCreateRegion"
+      number: 1010
+    }
+    value {
+      name: "NtGdiExtEscape"
+      number: 1011
+    }
+    value {
+      name: "NtGdiExtFloodFill"
+      number: 1012
+    }
+    value {
+      name: "NtGdiExtGetObjectW"
+      number: 1013
+    }
+    value {
+      name: "NtGdiExtSelectClipRgn"
+      number: 1014
+    }
+    value {
+      name: "NtGdiExtTextOutW"
+      number: 1015
+    }
+    value {
+      name: "NtGdiFONTOBJ_cGetAllGlyphHandles"
+      number: 1016
+    }
+    value {
+      name: "NtGdiFONTOBJ_cGetGlyphs"
+      number: 1017
+    }
+    value {
+      name: "NtGdiFONTOBJ_pQueryGlyphAttrs"
+      number: 1018
+    }
+    value {
+      name: "NtGdiFONTOBJ_pfdg"
+      number: 1019
+    }
+    value {
+      name: "NtGdiFONTOBJ_pifi"
+      number: 1020
+    }
+    value {
+      name: "NtGdiFONTOBJ_pvTrueTypeFontFile"
+      number: 1021
+    }
+    value {
+      name: "NtGdiFONTOBJ_pxoGetXform"
+      number: 1022
+    }
+    value {
+      name: "NtGdiFONTOBJ_vGetInfo"
+      number: 1023
+    }
+    value {
+      name: "NtGdiFillPath"
+      number: 1024
+    }
+    value {
+      name: "NtGdiFillRgn"
+      number: 1025
+    }
+    value {
+      name: "NtGdiFlattenPath"
+      number: 1026
+    }
+    value {
+      name: "NtGdiFlush"
+      number: 1027
+    }
+    value {
+      name: "NtGdiFontIsLinked"
+      number: 1028
+    }
+    value {
+      name: "NtGdiForceUFIMapping"
+      number: 1029
+    }
+    value {
+      name: "NtGdiFrameRgn"
+      number: 1030
+    }
+    value {
+      name: "NtGdiFullscreenControl"
+      number: 1031
+    }
+    value {
+      name: "NtGdiGetAndSetDCDword"
+      number: 1032
+    }
+    value {
+      name: "NtGdiGetAppClipBox"
+      number: 1033
+    }
+    value {
+      name: "NtGdiGetAppliedDeviceGammaRamp"
+      number: 1034
+    }
+    value {
+      name: "NtGdiGetBitmapBits"
+      number: 1035
+    }
+    value {
+      name: "NtGdiGetBitmapDimension"
+      number: 1036
+    }
+    value {
+      name: "NtGdiGetBitmapDpiScaleValue"
+      number: 1037
+    }
+    value {
+      name: "NtGdiGetBoundsRect"
+      number: 1038
+    }
+    value {
+      name: "NtGdiGetCOPPCompatibleOPMInformation"
+      number: 1039
+    }
+    value {
+      name: "NtGdiGetCertificate"
+      number: 1040
+    }
+    value {
+      name: "NtGdiGetCertificateByHandle"
+      number: 1041
+    }
+    value {
+      name: "NtGdiGetCertificateSize"
+      number: 1042
+    }
+    value {
+      name: "NtGdiGetCertificateSizeByHandle"
+      number: 1043
+    }
+    value {
+      name: "NtGdiGetCharABCWidthsW"
+      number: 1044
+    }
+    value {
+      name: "NtGdiGetCharSet"
+      number: 1045
+    }
+    value {
+      name: "NtGdiGetCharWidthInfo"
+      number: 1046
+    }
+    value {
+      name: "NtGdiGetCharWidthW"
+      number: 1047
+    }
+    value {
+      name: "NtGdiGetCharacterPlacementW"
+      number: 1048
+    }
+    value {
+      name: "NtGdiGetColorAdjustment"
+      number: 1049
+    }
+    value {
+      name: "NtGdiGetColorSpaceforBitmap"
+      number: 1050
+    }
+    value {
+      name: "NtGdiGetCurrentDpiInfo"
+      number: 1051
+    }
+    value {
+      name: "NtGdiGetDCDpiScaleValue"
+      number: 1052
+    }
+    value {
+      name: "NtGdiGetDCDword"
+      number: 1053
+    }
+    value {
+      name: "NtGdiGetDCObject"
+      number: 1054
+    }
+    value {
+      name: "NtGdiGetDCPoint"
+      number: 1055
+    }
+    value {
+      name: "NtGdiGetDCforBitmap"
+      number: 1056
+    }
+    value {
+      name: "NtGdiGetDIBitsInternal"
+      number: 1057
+    }
+    value {
+      name: "NtGdiGetDeviceCaps"
+      number: 1058
+    }
+    value {
+      name: "NtGdiGetDeviceCapsAll"
+      number: 1059
+    }
+    value {
+      name: "NtGdiGetDeviceGammaRamp"
+      number: 1060
+    }
+    value {
+      name: "NtGdiGetDeviceWidth"
+      number: 1061
+    }
+    value {
+      name: "NtGdiGetDhpdev"
+      number: 1062
+    }
+    value {
+      name: "NtGdiGetETM"
+      number: 1063
+    }
+    value {
+      name: "NtGdiGetEmbUFI"
+      number: 1064
+    }
+    value {
+      name: "NtGdiGetEmbedFonts"
+      number: 1065
+    }
+    value {
+      name: "NtGdiGetEntry"
+      number: 1066
+    }
+    value {
+      name: "NtGdiGetEudcTimeStampEx"
+      number: 1067
+    }
+    value {
+      name: "NtGdiGetFontData"
+      number: 1068
+    }
+    value {
+      name: "NtGdiGetFontFileData"
+      number: 1069
+    }
+    value {
+      name: "NtGdiGetFontFileInfo"
+      number: 1070
+    }
+    value {
+      name: "NtGdiGetFontResourceInfoInternalW"
+      number: 1071
+    }
+    value {
+      name: "NtGdiGetFontUnicodeRanges"
+      number: 1072
+    }
+    value {
+      name: "NtGdiGetGammaRampCapability"
+      number: 1073
+    }
+    value {
+      name: "NtGdiGetGlyphIndicesW"
+      number: 1074
+    }
+    value {
+      name: "NtGdiGetGlyphIndicesWInternal"
+      number: 1075
+    }
+    value {
+      name: "NtGdiGetGlyphOutline"
+      number: 1076
+    }
+    value {
+      name: "NtGdiGetKerningPairs"
+      number: 1077
+    }
+    value {
+      name: "NtGdiGetLinkedUFIs"
+      number: 1078
+    }
+    value {
+      name: "NtGdiGetMiterLimit"
+      number: 1079
+    }
+    value {
+      name: "NtGdiGetMonitorID"
+      number: 1080
+    }
+    value {
+      name: "NtGdiGetNearestColor"
+      number: 1081
+    }
+    value {
+      name: "NtGdiGetNearestPaletteIndex"
+      number: 1082
+    }
+    value {
+      name: "NtGdiGetNumberOfPhysicalMonitors"
+      number: 1083
+    }
+    value {
+      name: "NtGdiGetOPMInformation"
+      number: 1084
+    }
+    value {
+      name: "NtGdiGetOPMRandomNumber"
+      number: 1085
+    }
+    value {
+      name: "NtGdiGetObjectBitmapHandle"
+      number: 1086
+    }
+    value {
+      name: "NtGdiGetOutlineTextMetricsInternalW"
+      number: 1087
+    }
+    value {
+      name: "NtGdiGetPath"
+      number: 1088
+    }
+    value {
+      name: "NtGdiGetPerBandInfo"
+      number: 1089
+    }
+    value {
+      name: "NtGdiGetPhysicalMonitorDescription"
+      number: 1090
+    }
+    value {
+      name: "NtGdiGetPhysicalMonitors"
+      number: 1091
+    }
+    value {
+      name: "NtGdiGetPixel"
+      number: 1092
+    }
+    value {
+      name: "NtGdiGetProcessSessionFonts"
+      number: 1093
+    }
+    value {
+      name: "NtGdiGetPublicFontTableChangeCookie"
+      number: 1094
+    }
+    value {
+      name: "NtGdiGetRandomRgn"
+      number: 1095
+    }
+    value {
+      name: "NtGdiGetRasterizerCaps"
+      number: 1096
+    }
+    value {
+      name: "NtGdiGetRealizationInfo"
+      number: 1097
+    }
+    value {
+      name: "NtGdiGetRegionData"
+      number: 1098
+    }
+    value {
+      name: "NtGdiGetRgnBox"
+      number: 1099
+    }
+    value {
+      name: "NtGdiGetServerMetaFileBits"
+      number: 1100
+    }
+    value {
+      name: "NtGdiGetSpoolMessage"
+      number: 1101
+    }
+    value {
+      name: "NtGdiGetStats"
+      number: 1102
+    }
+    value {
+      name: "NtGdiGetStockObject"
+      number: 1103
+    }
+    value {
+      name: "NtGdiGetStringBitmapW"
+      number: 1104
+    }
+    value {
+      name: "NtGdiGetSuggestedOPMProtectedOutputArraySize"
+      number: 1105
+    }
+    value {
+      name: "NtGdiGetSystemPaletteUse"
+      number: 1106
+    }
+    value {
+      name: "NtGdiGetTextCharsetInfo"
+      number: 1107
+    }
+    value {
+      name: "NtGdiGetTextExtent"
+      number: 1108
+    }
+    value {
+      name: "NtGdiGetTextExtentExW"
+      number: 1109
+    }
+    value {
+      name: "NtGdiGetTextFaceW"
+      number: 1110
+    }
+    value {
+      name: "NtGdiGetTextMetricsW"
+      number: 1111
+    }
+    value {
+      name: "NtGdiGetTransform"
+      number: 1112
+    }
+    value {
+      name: "NtGdiGetUFI"
+      number: 1113
+    }
+    value {
+      name: "NtGdiGetUFIPathname"
+      number: 1114
+    }
+    value {
+      name: "NtGdiGetWidthTable"
+      number: 1115
+    }
+    value {
+      name: "NtGdiGradientFill"
+      number: 1116
+    }
+    value {
+      name: "NtGdiHLSurfGetInformation"
+      number: 1117
+    }
+    value {
+      name: "NtGdiHLSurfSetInformation"
+      number: 1118
+    }
+    value {
+      name: "NtGdiHT_Get8BPPFormatPalette"
+      number: 1119
+    }
+    value {
+      name: "NtGdiHT_Get8BPPMaskPalette"
+      number: 1120
+    }
+    value {
+      name: "NtGdiHfontCreate"
+      number: 1121
+    }
+    value {
+      name: "NtGdiIcmBrushInfo"
+      number: 1122
+    }
+    value {
+      name: "NtGdiInit"
+      number: 1123
+    }
+    value {
+      name: "NtGdiInitSpool"
+      number: 1124
+    }
+    value {
+      name: "NtGdiIntersectClipRect"
+      number: 1125
+    }
+    value {
+      name: "NtGdiInvertRgn"
+      number: 1126
+    }
+    value {
+      name: "NtGdiLineTo"
+      number: 1127
+    }
+    value {
+      name: "NtGdiMakeFontDir"
+      number: 1128
+    }
+    value {
+      name: "NtGdiMakeInfoDC"
+      number: 1129
+    }
+    value {
+      name: "NtGdiMakeObjectUnXferable"
+      number: 1130
+    }
+    value {
+      name: "NtGdiMakeObjectXferable"
+      number: 1131
+    }
+    value {
+      name: "NtGdiMaskBlt"
+      number: 1132
+    }
+    value {
+      name: "NtGdiMirrorWindowOrg"
+      number: 1133
+    }
+    value {
+      name: "NtGdiModifyWorldTransform"
+      number: 1134
+    }
+    value {
+      name: "NtGdiMonoBitmap"
+      number: 1135
+    }
+    value {
+      name: "NtGdiMoveTo"
+      number: 1136
+    }
+    value {
+      name: "NtGdiOffsetClipRgn"
+      number: 1137
+    }
+    value {
+      name: "NtGdiOffsetRgn"
+      number: 1138
+    }
+    value {
+      name: "NtGdiOpenDCW"
+      number: 1139
+    }
+    value {
+      name: "NtGdiPATHOBJ_bEnum"
+      number: 1140
+    }
+    value {
+      name: "NtGdiPATHOBJ_bEnumClipLines"
+      number: 1141
+    }
+    value {
+      name: "NtGdiPATHOBJ_vEnumStart"
+      number: 1142
+    }
+    value {
+      name: "NtGdiPATHOBJ_vEnumStartClipLines"
+      number: 1143
+    }
+    value {
+      name: "NtGdiPATHOBJ_vGetBounds"
+      number: 1144
+    }
+    value {
+      name: "NtGdiPatBlt"
+      number: 1145
+    }
+    value {
+      name: "NtGdiPathToRegion"
+      number: 1146
+    }
+    value {
+      name: "NtGdiPlgBlt"
+      number: 1147
+    }
+    value {
+      name: "NtGdiPolyDraw"
+      number: 1148
+    }
+    value {
+      name: "NtGdiPolyPatBlt"
+      number: 1149
+    }
+    value {
+      name: "NtGdiPolyPolyDraw"
+      number: 1150
+    }
+    value {
+      name: "NtGdiPolyTextOutW"
+      number: 1151
+    }
+    value {
+      name: "NtGdiPtInRegion"
+      number: 1152
+    }
+    value {
+      name: "NtGdiPtVisible"
+      number: 1153
+    }
+    value {
+      name: "NtGdiQueryFontAssocInfo"
+      number: 1154
+    }
+    value {
+      name: "NtGdiQueryFonts"
+      number: 1155
+    }
+    value {
+      name: "NtGdiRectInRegion"
+      number: 1156
+    }
+    value {
+      name: "NtGdiRectVisible"
+      number: 1157
+    }
+    value {
+      name: "NtGdiRectangle"
+      number: 1158
+    }
+    value {
+      name: "NtGdiRemoveFontMemResourceEx"
+      number: 1159
+    }
+    value {
+      name: "NtGdiRemoveFontResourceW"
+      number: 1160
+    }
+    value {
+      name: "NtGdiRemoveMergeFont"
+      number: 1161
+    }
+    value {
+      name: "NtGdiResetDC"
+      number: 1162
+    }
+    value {
+      name: "NtGdiResizePalette"
+      number: 1163
+    }
+    value {
+      name: "NtGdiRestoreDC"
+      number: 1164
+    }
+    value {
+      name: "NtGdiRoundRect"
+      number: 1165
+    }
+    value {
+      name: "NtGdiSTROBJ_bEnum"
+      number: 1166
+    }
+    value {
+      name: "NtGdiSTROBJ_bEnumPositionsOnly"
+      number: 1167
+    }
+    value {
+      name: "NtGdiSTROBJ_bGetAdvanceWidths"
+      number: 1168
+    }
+    value {
+      name: "NtGdiSTROBJ_dwGetCodePage"
+      number: 1169
+    }
+    value {
+      name: "NtGdiSTROBJ_vEnumStart"
+      number: 1170
+    }
+    value {
+      name: "NtGdiSaveDC"
+      number: 1171
+    }
+    value {
+      name: "NtGdiScaleRgn"
+      number: 1172
+    }
+    value {
+      name: "NtGdiScaleValues"
+      number: 1173
+    }
+    value {
+      name: "NtGdiScaleViewportExtEx"
+      number: 1174
+    }
+    value {
+      name: "NtGdiScaleWindowExtEx"
+      number: 1175
+    }
+    value {
+      name: "NtGdiSelectBitmap"
+      number: 1176
+    }
+    value {
+      name: "NtGdiSelectBrush"
+      number: 1177
+    }
+    value {
+      name: "NtGdiSelectClipPath"
+      number: 1178
+    }
+    value {
+      name: "NtGdiSelectFont"
+      number: 1179
+    }
+    value {
+      name: "NtGdiSelectPen"
+      number: 1180
+    }
+    value {
+      name: "NtGdiSetBitmapAttributes"
+      number: 1181
+    }
+    value {
+      name: "NtGdiSetBitmapBits"
+      number: 1182
+    }
+    value {
+      name: "NtGdiSetBitmapDimension"
+      number: 1183
+    }
+    value {
+      name: "NtGdiSetBoundsRect"
+      number: 1184
+    }
+    value {
+      name: "NtGdiSetBrushAttributes"
+      number: 1185
+    }
+    value {
+      name: "NtGdiSetBrushOrg"
+      number: 1186
+    }
+    value {
+      name: "NtGdiSetColorAdjustment"
+      number: 1187
+    }
+    value {
+      name: "NtGdiSetColorSpace"
+      number: 1188
+    }
+    value {
+      name: "NtGdiSetDIBitsToDeviceInternal"
+      number: 1189
+    }
+    value {
+      name: "NtGdiSetDeviceGammaRamp"
+      number: 1190
+    }
+    value {
+      name: "NtGdiSetFontEnumeration"
+      number: 1191
+    }
+    value {
+      name: "NtGdiSetFontXform"
+      number: 1192
+    }
+    value {
+      name: "NtGdiSetIcmMode"
+      number: 1193
+    }
+    value {
+      name: "NtGdiSetLayout"
+      number: 1194
+    }
+    value {
+      name: "NtGdiSetLinkedUFIs"
+      number: 1195
+    }
+    value {
+      name: "NtGdiSetMagicColors"
+      number: 1196
+    }
+    value {
+      name: "NtGdiSetMetaRgn"
+      number: 1197
+    }
+    value {
+      name: "NtGdiSetMiterLimit"
+      number: 1198
+    }
+    value {
+      name: "NtGdiSetOPMSigningKeyAndSequenceNumbers"
+      number: 1199
+    }
+    value {
+      name: "NtGdiSetPUMPDOBJ"
+      number: 1200
+    }
+    value {
+      name: "NtGdiSetPixel"
+      number: 1201
+    }
+    value {
+      name: "NtGdiSetPixelFormat"
+      number: 1202
+    }
+    value {
+      name: "NtGdiSetPrivateDeviceGammaRamp"
+      number: 1203
+    }
+    value {
+      name: "NtGdiSetRectRgn"
+      number: 1204
+    }
+    value {
+      name: "NtGdiSetSizeDevice"
+      number: 1205
+    }
+    value {
+      name: "NtGdiSetSystemPaletteUse"
+      number: 1206
+    }
+    value {
+      name: "NtGdiSetTextJustification"
+      number: 1207
+    }
+    value {
+      name: "NtGdiSetUMPDSandboxState"
+      number: 1208
+    }
+    value {
+      name: "NtGdiSetVirtualResolution"
+      number: 1209
+    }
+    value {
+      name: "NtGdiSetupPublicCFONT"
+      number: 1210
+    }
+    value {
+      name: "NtGdiSfmGetNotificationTokens"
+      number: 1211
+    }
+    value {
+      name: "NtGdiStartDoc"
+      number: 1212
+    }
+    value {
+      name: "NtGdiStartPage"
+      number: 1213
+    }
+    value {
+      name: "NtGdiStretchBlt"
+      number: 1214
+    }
+    value {
+      name: "NtGdiStretchDIBitsInternal"
+      number: 1215
+    }
+    value {
+      name: "NtGdiStrokeAndFillPath"
+      number: 1216
+    }
+    value {
+      name: "NtGdiStrokePath"
+      number: 1217
+    }
+    value {
+      name: "NtGdiSwapBuffers"
+      number: 1218
+    }
+    value {
+      name: "NtGdiTransformPoints"
+      number: 1219
+    }
+    value {
+      name: "NtGdiTransparentBlt"
+      number: 1220
+    }
+    value {
+      name: "NtGdiUMPDEngFreeUserMem"
+      number: 1221
+    }
+    value {
+      name: "NtGdiUnloadPrinterDriver"
+      number: 1222
+    }
+    value {
+      name: "NtGdiUnmapMemFont"
+      number: 1223
+    }
+    value {
+      name: "NtGdiUnrealizeObject"
+      number: 1224
+    }
+    value {
+      name: "NtGdiUpdateColors"
+      number: 1225
+    }
+    value {
+      name: "NtGdiUpdateTransform"
+      number: 1226
+    }
+    value {
+      name: "NtGdiWidenPath"
+      number: 1227
+    }
+    value {
+      name: "NtGdiXFORMOBJ_bApplyXform"
+      number: 1228
+    }
+    value {
+      name: "NtGdiXFORMOBJ_iGetXform"
+      number: 1229
+    }
+    value {
+      name: "NtGdiXLATEOBJ_cGetPalette"
+      number: 1230
+    }
+    value {
+      name: "NtGdiXLATEOBJ_hGetColorTransform"
+      number: 1231
+    }
+    value {
+      name: "NtGdiXLATEOBJ_iXlate"
+      number: 1232
+    }
+    value {
+      name: "NtHWCursorUpdatePointer"
+      number: 1233
+    }
+    value {
+      name: "NtIsOneCoreTransformMode"
+      number: 1234
+    }
+    value {
+      name: "NtMITActivateInputProcessing"
+      number: 1235
+    }
+    value {
+      name: "NtMITBindInputTypeToMonitors"
+      number: 1236
+    }
+    value {
+      name: "NtMITCoreMsgKGetConnectionHandle"
+      number: 1237
+    }
+    value {
+      name: "NtMITCoreMsgKOpenConnectionTo"
+      number: 1238
+    }
+    value {
+      name: "NtMITCoreMsgKSend"
+      number: 1239
+    }
+    value {
+      name: "NtMITDeactivateInputProcessing"
+      number: 1240
+    }
+    value {
+      name: "NtMITDisableMouseIntercept"
+      number: 1241
+    }
+    value {
+      name: "NtMITDispatchCompletion"
+      number: 1242
+    }
+    value {
+      name: "NtMITEnableMouseIntercept"
+      number: 1243
+    }
+    value {
+      name: "NtMITGetCursorUpdateHandle"
+      number: 1244
+    }
+    value {
+      name: "NtMITSetInputCallbacks"
+      number: 1245
+    }
+    value {
+      name: "NtMITSetInputDelegationMode"
+      number: 1246
+    }
+    value {
+      name: "NtMITSetLastInputRecipient"
+      number: 1247
+    }
+    value {
+      name: "NtMITSynthesizeMouseInput"
+      number: 1248
+    }
+    value {
+      name: "NtMITSynthesizeMouseWheel"
+      number: 1249
+    }
+    value {
+      name: "NtMITSynthesizeTouchInput"
+      number: 1250
+    }
+    value {
+      name: "NtMITUpdateInputGlobals"
+      number: 1251
+    }
+    value {
+      name: "NtMITWaitForMultipleObjectsEx"
+      number: 1252
+    }
+    value {
+      name: "NtMapVisualRelativePoints"
+      number: 1253
+    }
+    value {
+      name: "NtNotifyPresentToCompositionSurface"
+      number: 1254
+    }
+    value {
+      name: "NtOpenCompositionSurfaceDirtyRegion"
+      number: 1255
+    }
+    value {
+      name: "NtOpenCompositionSurfaceSectionInfo"
+      number: 1256
+    }
+    value {
+      name: "NtOpenCompositionSurfaceSwapChainHandleInfo"
+      number: 1257
+    }
+    value {
+      name: "NtQueryCompositionInputIsImplicit"
+      number: 1258
+    }
+    value {
+      name: "NtQueryCompositionInputQueueAndTransform"
+      number: 1259
+    }
+    value {
+      name: "NtQueryCompositionInputSink"
+      number: 1260
+    }
+    value {
+      name: "NtQueryCompositionInputSinkLuid"
+      number: 1261
+    }
+    value {
+      name: "NtQueryCompositionInputSinkViewId"
+      number: 1262
+    }
+    value {
+      name: "NtQueryCompositionSurfaceBinding"
+      number: 1263
+    }
+    value {
+      name: "NtQueryCompositionSurfaceHDRMetaData"
+      number: 1264
+    }
+    value {
+      name: "NtQueryCompositionSurfaceRenderingRealization"
+      number: 1265
+    }
+    value {
+      name: "NtQueryCompositionSurfaceStatistics"
+      number: 1266
+    }
+    value {
+      name: "NtRIMAddInputObserver"
+      number: 1267
+    }
+    value {
+      name: "NtRIMAreSiblingDevices"
+      number: 1268
+    }
+    value {
+      name: "NtRIMDeviceIoControl"
+      number: 1269
+    }
+    value {
+      name: "NtRIMEnableMonitorMappingForDevice"
+      number: 1270
+    }
+    value {
+      name: "NtRIMFreeInputBuffer"
+      number: 1271
+    }
+    value {
+      name: "NtRIMGetDevicePreparsedData"
+      number: 1272
+    }
+    value {
+      name: "NtRIMGetDevicePreparsedDataLockfree"
+      number: 1273
+    }
+    value {
+      name: "NtRIMGetDeviceProperties"
+      number: 1274
+    }
+    value {
+      name: "NtRIMGetDevicePropertiesLockfree"
+      number: 1275
+    }
+    value {
+      name: "NtRIMGetPhysicalDeviceRect"
+      number: 1276
+    }
+    value {
+      name: "NtRIMGetSourceProcessId"
+      number: 1277
+    }
+    value {
+      name: "NtRIMObserveNextInput"
+      number: 1278
+    }
+    value {
+      name: "NtRIMOnPnpNotification"
+      number: 1279
+    }
+    value {
+      name: "NtRIMOnTimerNotification"
+      number: 1280
+    }
+    value {
+      name: "NtRIMReadInput"
+      number: 1281
+    }
+    value {
+      name: "NtRIMRegisterForInput"
+      number: 1282
+    }
+    value {
+      name: "NtRIMRemoveInputObserver"
+      number: 1283
+    }
+    value {
+      name: "NtRIMSetTestModeStatus"
+      number: 1284
+    }
+    value {
+      name: "NtRIMUnregisterForInput"
+      number: 1285
+    }
+    value {
+      name: "NtRIMUpdateInputObserverRegistration"
+      number: 1286
+    }
+    value {
+      name: "NtSetCompositionSurfaceAnalogExclusive"
+      number: 1287
+    }
+    value {
+      name: "NtSetCompositionSurfaceBufferCompositionMode"
+      number: 1288
+    }
+    value {
+      name: "NtSetCompositionSurfaceBufferCompositionModeAndOrientation"
+      number: 1289
+    }
+    value {
+      name: "NtSetCompositionSurfaceBufferUsage"
+      number: 1290
+    }
+    value {
+      name: "NtSetCompositionSurfaceDirectFlipState"
+      number: 1291
+    }
+    value {
+      name: "NtSetCompositionSurfaceHDRMetaData"
+      number: 1292
+    }
+    value {
+      name: "NtSetCompositionSurfaceIndependentFlipInfo"
+      number: 1293
+    }
+    value {
+      name: "NtSetCompositionSurfaceOutOfFrameDirectFlipNotification"
+      number: 1294
+    }
+    value {
+      name: "NtSetCompositionSurfaceStatistics"
+      number: 1295
+    }
+    value {
+      name: "NtSetCursorInputSpace"
+      number: 1296
+    }
+    value {
+      name: "NtSetPointerDeviceInputSpace"
+      number: 1297
+    }
+    value {
+      name: "NtSetShellCursorState"
+      number: 1298
+    }
+    value {
+      name: "NtTokenManagerConfirmOutstandingAnalogToken"
+      number: 1299
+    }
+    value {
+      name: "NtTokenManagerCreateCompositionTokenHandle"
+      number: 1300
+    }
+    value {
+      name: "NtTokenManagerCreateFlipObjectReturnTokenHandle"
+      number: 1301
+    }
+    value {
+      name: "NtTokenManagerCreateFlipObjectTokenHandle"
+      number: 1302
+    }
+    value {
+      name: "NtTokenManagerDeleteOutstandingDirectFlipTokens"
+      number: 1303
+    }
+    value {
+      name: "NtTokenManagerGetAnalogExclusiveSurfaceUpdates"
+      number: 1304
+    }
+    value {
+      name: "NtTokenManagerGetAnalogExclusiveTokenEvent"
+      number: 1305
+    }
+    value {
+      name: "NtTokenManagerGetOutOfFrameDirectFlipSurfaceUpdates"
+      number: 1306
+    }
+    value {
+      name: "NtTokenManagerOpenEvent"
+      number: 1307
+    }
+    value {
+      name: "NtTokenManagerOpenSection"
+      number: 1308
+    }
+    value {
+      name: "NtTokenManagerOpenSectionAndEvents"
+      number: 1309
+    }
+    value {
+      name: "NtTokenManagerThread"
+      number: 1310
+    }
+    value {
+      name: "NtUnBindCompositionSurface"
+      number: 1311
+    }
+    value {
+      name: "NtUpdateInputSinkTransforms"
+      number: 1312
+    }
+    value {
+      name: "NtUserAcquireIAMKey"
+      number: 1313
+    }
+    value {
+      name: "NtUserAcquireInteractiveControlBackgroundAccess"
+      number: 1314
+    }
+    value {
+      name: "NtUserActivateKeyboardLayout"
+      number: 1315
+    }
+    value {
+      name: "NtUserAddClipboardFormatListener"
+      number: 1316
+    }
+    value {
+      name: "NtUserAlterWindowStyle"
+      number: 1317
+    }
+    value {
+      name: "NtUserAssociateInputContext"
+      number: 1318
+    }
+    value {
+      name: "NtUserAttachThreadInput"
+      number: 1319
+    }
+    value {
+      name: "NtUserAutoPromoteMouseInPointer"
+      number: 1320
+    }
+    value {
+      name: "NtUserAutoRotateScreen"
+      number: 1321
+    }
+    value {
+      name: "NtUserBeginLayoutUpdate"
+      number: 1322
+    }
+    value {
+      name: "NtUserBeginPaint"
+      number: 1323
+    }
+    value {
+      name: "NtUserBitBltSysBmp"
+      number: 1324
+    }
+    value {
+      name: "NtUserBlockInput"
+      number: 1325
+    }
+    value {
+      name: "NtUserBroadcastThemeChangeEvent"
+      number: 1326
+    }
+    value {
+      name: "NtUserBuildHimcList"
+      number: 1327
+    }
+    value {
+      name: "NtUserBuildHwndList"
+      number: 1328
+    }
+    value {
+      name: "NtUserBuildNameList"
+      number: 1329
+    }
+    value {
+      name: "NtUserBuildPropList"
+      number: 1330
+    }
+    value {
+      name: "NtUserCalcMenuBar"
+      number: 1331
+    }
+    value {
+      name: "NtUserCalculatePopupWindowPosition"
+      number: 1332
+    }
+    value {
+      name: "NtUserCallHwnd"
+      number: 1333
+    }
+    value {
+      name: "NtUserCallHwndLock"
+      number: 1334
+    }
+    value {
+      name: "NtUserCallHwndLockSafe"
+      number: 1335
+    }
+    value {
+      name: "NtUserCallHwndOpt"
+      number: 1336
+    }
+    value {
+      name: "NtUserCallHwndParam"
+      number: 1337
+    }
+    value {
+      name: "NtUserCallHwndParamLock"
+      number: 1338
+    }
+    value {
+      name: "NtUserCallHwndParamLockSafe"
+      number: 1339
+    }
+    value {
+      name: "NtUserCallHwndSafe"
+      number: 1340
+    }
+    value {
+      name: "NtUserCallMsgFilter"
+      number: 1341
+    }
+    value {
+      name: "NtUserCallNextHookEx"
+      number: 1342
+    }
+    value {
+      name: "NtUserCallNoParam"
+      number: 1343
+    }
+    value {
+      name: "NtUserCallOneParam"
+      number: 1344
+    }
+    value {
+      name: "NtUserCallTwoParam"
+      number: 1345
+    }
+    value {
+      name: "NtUserCanBrokerForceForeground"
+      number: 1346
+    }
+    value {
+      name: "NtUserChangeClipboardChain"
+      number: 1347
+    }
+    value {
+      name: "NtUserChangeDisplaySettings"
+      number: 1348
+    }
+    value {
+      name: "NtUserChangeWindowMessageFilterEx"
+      number: 1349
+    }
+    value {
+      name: "NtUserCheckAccessForIntegrityLevel"
+      number: 1350
+    }
+    value {
+      name: "NtUserCheckDesktopByThreadId"
+      number: 1351
+    }
+    value {
+      name: "NtUserCheckImeHotKey"
+      number: 1352
+    }
+    value {
+      name: "NtUserCheckMenuItem"
+      number: 1353
+    }
+    value {
+      name: "NtUserCheckProcessForClipboardAccess"
+      number: 1354
+    }
+    value {
+      name: "NtUserCheckProcessSession"
+      number: 1355
+    }
+    value {
+      name: "NtUserCheckWindowThreadDesktop"
+      number: 1356
+    }
+    value {
+      name: "NtUserChildWindowFromPointEx"
+      number: 1357
+    }
+    value {
+      name: "NtUserClearForeground"
+      number: 1358
+    }
+    value {
+      name: "NtUserClipCursor"
+      number: 1359
+    }
+    value {
+      name: "NtUserCloseClipboard"
+      number: 1360
+    }
+    value {
+      name: "NtUserCloseDesktop"
+      number: 1361
+    }
+    value {
+      name: "NtUserCloseWindowStation"
+      number: 1362
+    }
+    value {
+      name: "NtUserCompositionInputSinkLuidFromPoint"
+      number: 1363
+    }
+    value {
+      name: "NtUserCompositionInputSinkViewInstanceIdFromPoint"
+      number: 1364
+    }
+    value {
+      name: "NtUserConfirmResizeCommit"
+      number: 1365
+    }
+    value {
+      name: "NtUserConsoleControl"
+      number: 1366
+    }
+    value {
+      name: "NtUserConvertMemHandle"
+      number: 1367
+    }
+    value {
+      name: "NtUserCopyAcceleratorTable"
+      number: 1368
+    }
+    value {
+      name: "NtUserCountClipboardFormats"
+      number: 1369
+    }
+    value {
+      name: "NtUserCreateAcceleratorTable"
+      number: 1370
+    }
+    value {
+      name: "NtUserCreateCaret"
+      number: 1371
+    }
+    value {
+      name: "NtUserCreateDCompositionHwndTarget"
+      number: 1372
+    }
+    value {
+      name: "NtUserCreateDesktop"
+      number: 1373
+    }
+    value {
+      name: "NtUserCreateDesktopEx"
+      number: 1374
+    }
+    value {
+      name: "NtUserCreateEmptyCursorObject"
+      number: 1375
+    }
+    value {
+      name: "NtUserCreateInputContext"
+      number: 1376
+    }
+    value {
+      name: "NtUserCreateLocalMemHandle"
+      number: 1377
+    }
+    value {
+      name: "NtUserCreatePalmRejectionDelayZone"
+      number: 1378
+    }
+    value {
+      name: "NtUserCreateWindowEx"
+      number: 1379
+    }
+    value {
+      name: "NtUserCreateWindowGroup"
+      number: 1380
+    }
+    value {
+      name: "NtUserCreateWindowStation"
+      number: 1381
+    }
+    value {
+      name: "NtUserCtxDisplayIOCtl"
+      number: 1382
+    }
+    value {
+      name: "NtUserDdeGetQualityOfService"
+      number: 1383
+    }
+    value {
+      name: "NtUserDdeInitialize"
+      number: 1384
+    }
+    value {
+      name: "NtUserDdeSetQualityOfService"
+      number: 1385
+    }
+    value {
+      name: "NtUserDefSetText"
+      number: 1386
+    }
+    value {
+      name: "NtUserDeferWindowDpiChanges"
+      number: 1387
+    }
+    value {
+      name: "NtUserDeferWindowPos"
+      number: 1388
+    }
+    value {
+      name: "NtUserDeferWindowPosAndBand"
+      number: 1389
+    }
+    value {
+      name: "NtUserDelegateCapturePointers"
+      number: 1390
+    }
+    value {
+      name: "NtUserDelegateInput"
+      number: 1391
+    }
+    value {
+      name: "NtUserDeleteMenu"
+      number: 1392
+    }
+    value {
+      name: "NtUserDeleteWindowGroup"
+      number: 1393
+    }
+    value {
+      name: "NtUserDestroyAcceleratorTable"
+      number: 1394
+    }
+    value {
+      name: "NtUserDestroyCursor"
+      number: 1395
+    }
+    value {
+      name: "NtUserDestroyDCompositionHwndTarget"
+      number: 1396
+    }
+    value {
+      name: "NtUserDestroyInputContext"
+      number: 1397
+    }
+    value {
+      name: "NtUserDestroyMenu"
+      number: 1398
+    }
+    value {
+      name: "NtUserDestroyPalmRejectionDelayZone"
+      number: 1399
+    }
+    value {
+      name: "NtUserDestroyWindow"
+      number: 1400
+    }
+    value {
+      name: "NtUserDisableImmersiveOwner"
+      number: 1401
+    }
+    value {
+      name: "NtUserDisableProcessWindowFiltering"
+      number: 1402
+    }
+    value {
+      name: "NtUserDisableThreadIme"
+      number: 1403
+    }
+    value {
+      name: "NtUserDiscardPointerFrameMessages"
+      number: 1404
+    }
+    value {
+      name: "NtUserDispatchMessage"
+      number: 1405
+    }
+    value {
+      name: "NtUserDisplayConfigGetDeviceInfo"
+      number: 1406
+    }
+    value {
+      name: "NtUserDisplayConfigSetDeviceInfo"
+      number: 1407
+    }
+    value {
+      name: "NtUserDoSoundConnect"
+      number: 1408
+    }
+    value {
+      name: "NtUserDoSoundDisconnect"
+      number: 1409
+    }
+    value {
+      name: "NtUserDragDetect"
+      number: 1410
+    }
+    value {
+      name: "NtUserDragObject"
+      number: 1411
+    }
+    value {
+      name: "NtUserDrawAnimatedRects"
+      number: 1412
+    }
+    value {
+      name: "NtUserDrawCaption"
+      number: 1413
+    }
+    value {
+      name: "NtUserDrawCaptionTemp"
+      number: 1414
+    }
+    value {
+      name: "NtUserDrawIconEx"
+      number: 1415
+    }
+    value {
+      name: "NtUserDrawMenuBarTemp"
+      number: 1416
+    }
+    value {
+      name: "NtUserDwmGetDxRgn"
+      number: 1417
+    }
+    value {
+      name: "NtUserDwmGetRemoteSessionOcclusionEvent"
+      number: 1418
+    }
+    value {
+      name: "NtUserDwmGetRemoteSessionOcclusionState"
+      number: 1419
+    }
+    value {
+      name: "NtUserDwmHintDxUpdate"
+      number: 1420
+    }
+    value {
+      name: "NtUserDwmKernelShutdown"
+      number: 1421
+    }
+    value {
+      name: "NtUserDwmKernelStartup"
+      number: 1422
+    }
+    value {
+      name: "NtUserDwmStartRedirection"
+      number: 1423
+    }
+    value {
+      name: "NtUserDwmStopRedirection"
+      number: 1424
+    }
+    value {
+      name: "NtUserDwmValidateWindow"
+      number: 1425
+    }
+    value {
+      name: "NtUserEmptyClipboard"
+      number: 1426
+    }
+    value {
+      name: "NtUserEnableChildWindowDpiMessage"
+      number: 1427
+    }
+    value {
+      name: "NtUserEnableIAMAccess"
+      number: 1428
+    }
+    value {
+      name: "NtUserEnableMenuItem"
+      number: 1429
+    }
+    value {
+      name: "NtUserEnableMouseInPointer"
+      number: 1430
+    }
+    value {
+      name: "NtUserEnableMouseInputForCursorSuppression"
+      number: 1431
+    }
+    value {
+      name: "NtUserEnableNonClientDpiScaling"
+      number: 1432
+    }
+    value {
+      name: "NtUserEnableResizeLayoutSynchronization"
+      number: 1433
+    }
+    value {
+      name: "NtUserEnableScrollBar"
+      number: 1434
+    }
+    value {
+      name: "NtUserEnableSoftwareCursorForScreenCapture"
+      number: 1435
+    }
+    value {
+      name: "NtUserEnableTouchPad"
+      number: 1436
+    }
+    value {
+      name: "NtUserEnableWindowGDIScaledDpiMessage"
+      number: 1437
+    }
+    value {
+      name: "NtUserEnableWindowGroupPolicy"
+      number: 1438
+    }
+    value {
+      name: "NtUserEnableWindowResizeOptimization"
+      number: 1439
+    }
+    value {
+      name: "NtUserEndDeferWindowPosEx"
+      number: 1440
+    }
+    value {
+      name: "NtUserEndMenu"
+      number: 1441
+    }
+    value {
+      name: "NtUserEndPaint"
+      number: 1442
+    }
+    value {
+      name: "NtUserEndTouchOperation"
+      number: 1443
+    }
+    value {
+      name: "NtUserEnumDisplayDevices"
+      number: 1444
+    }
+    value {
+      name: "NtUserEnumDisplayMonitors"
+      number: 1445
+    }
+    value {
+      name: "NtUserEnumDisplaySettings"
+      number: 1446
+    }
+    value {
+      name: "NtUserEvent"
+      number: 1447
+    }
+    value {
+      name: "NtUserExcludeUpdateRgn"
+      number: 1448
+    }
+    value {
+      name: "NtUserFillWindow"
+      number: 1449
+    }
+    value {
+      name: "NtUserFindExistingCursorIcon"
+      number: 1450
+    }
+    value {
+      name: "NtUserFindWindowEx"
+      number: 1451
+    }
+    value {
+      name: "NtUserFlashWindowEx"
+      number: 1452
+    }
+    value {
+      name: "NtUserForceWindowToDpiForTest"
+      number: 1453
+    }
+    value {
+      name: "NtUserFrostCrashedWindow"
+      number: 1454
+    }
+    value {
+      name: "NtUserFunctionalizeDisplayConfig"
+      number: 1455
+    }
+    value {
+      name: "NtUserGetActiveProcessesDpis"
+      number: 1456
+    }
+    value {
+      name: "NtUserGetAltTabInfo"
+      number: 1457
+    }
+    value {
+      name: "NtUserGetAncestor"
+      number: 1458
+    }
+    value {
+      name: "NtUserGetAppImeLevel"
+      number: 1459
+    }
+    value {
+      name: "NtUserGetAsyncKeyState"
+      number: 1460
+    }
+    value {
+      name: "NtUserGetAtomName"
+      number: 1461
+    }
+    value {
+      name: "NtUserGetAutoRotationState"
+      number: 1462
+    }
+    value {
+      name: "NtUserGetCIMSSM"
+      number: 1463
+    }
+    value {
+      name: "NtUserGetCPD"
+      number: 1464
+    }
+    value {
+      name: "NtUserGetCaretBlinkTime"
+      number: 1465
+    }
+    value {
+      name: "NtUserGetCaretPos"
+      number: 1466
+    }
+    value {
+      name: "NtUserGetClassInfoEx"
+      number: 1467
+    }
+    value {
+      name: "NtUserGetClassName"
+      number: 1468
+    }
+    value {
+      name: "NtUserGetClipCursor"
+      number: 1469
+    }
+    value {
+      name: "NtUserGetClipboardAccessToken"
+      number: 1470
+    }
+    value {
+      name: "NtUserGetClipboardData"
+      number: 1471
+    }
+    value {
+      name: "NtUserGetClipboardFormatName"
+      number: 1472
+    }
+    value {
+      name: "NtUserGetClipboardOwner"
+      number: 1473
+    }
+    value {
+      name: "NtUserGetClipboardSequenceNumber"
+      number: 1474
+    }
+    value {
+      name: "NtUserGetClipboardViewer"
+      number: 1475
+    }
+    value {
+      name: "NtUserGetComboBoxInfo"
+      number: 1476
+    }
+    value {
+      name: "NtUserGetControlBrush"
+      number: 1477
+    }
+    value {
+      name: "NtUserGetControlColor"
+      number: 1478
+    }
+    value {
+      name: "NtUserGetCurrentDpiInfoForWindow"
+      number: 1479
+    }
+    value {
+      name: "NtUserGetCurrentInputMessageSource"
+      number: 1480
+    }
+    value {
+      name: "NtUserGetCursor"
+      number: 1481
+    }
+    value {
+      name: "NtUserGetCursorDims"
+      number: 1482
+    }
+    value {
+      name: "NtUserGetCursorFrameInfo"
+      number: 1483
+    }
+    value {
+      name: "NtUserGetCursorInfo"
+      number: 1484
+    }
+    value {
+      name: "NtUserGetDC"
+      number: 1485
+    }
+    value {
+      name: "NtUserGetDCEx"
+      number: 1486
+    }
+    value {
+      name: "NtUserGetDManipHookInitFunction"
+      number: 1487
+    }
+    value {
+      name: "NtUserGetDesktopID"
+      number: 1488
+    }
+    value {
+      name: "NtUserGetDisplayAutoRotationPreferences"
+      number: 1489
+    }
+    value {
+      name: "NtUserGetDisplayAutoRotationPreferencesByProcessId"
+      number: 1490
+    }
+    value {
+      name: "NtUserGetDisplayConfigBufferSizes"
+      number: 1491
+    }
+    value {
+      name: "NtUserGetDoubleClickTime"
+      number: 1492
+    }
+    value {
+      name: "NtUserGetDpiForCurrentProcess"
+      number: 1493
+    }
+    value {
+      name: "NtUserGetDpiForMonitor"
+      number: 1494
+    }
+    value {
+      name: "NtUserGetDpiSystemMetrics"
+      number: 1495
+    }
+    value {
+      name: "NtUserGetForegroundWindow"
+      number: 1496
+    }
+    value {
+      name: "NtUserGetGUIThreadInfo"
+      number: 1497
+    }
+    value {
+      name: "NtUserGetGestureConfig"
+      number: 1498
+    }
+    value {
+      name: "NtUserGetGestureExtArgs"
+      number: 1499
+    }
+    value {
+      name: "NtUserGetGestureInfo"
+      number: 1500
+    }
+    value {
+      name: "NtUserGetGlobalIMEStatus"
+      number: 1501
+    }
+    value {
+      name: "NtUserGetGuiResources"
+      number: 1502
+    }
+    value {
+      name: "NtUserGetHDevName"
+      number: 1503
+    }
+    value {
+      name: "NtUserGetHimetricScaleFactorFromPixelLocation"
+      number: 1504
+    }
+    value {
+      name: "NtUserGetIconInfo"
+      number: 1505
+    }
+    value {
+      name: "NtUserGetIconSize"
+      number: 1506
+    }
+    value {
+      name: "NtUserGetImeHotKey"
+      number: 1507
+    }
+    value {
+      name: "NtUserGetImeInfoEx"
+      number: 1508
+    }
+    value {
+      name: "NtUserGetInputLocaleInfo"
+      number: 1509
+    }
+    value {
+      name: "NtUserGetInteractiveControlDeviceInfo"
+      number: 1510
+    }
+    value {
+      name: "NtUserGetInteractiveControlInfo"
+      number: 1511
+    }
+    value {
+      name: "NtUserGetInteractiveCtrlSupportedWaveforms"
+      number: 1512
+    }
+    value {
+      name: "NtUserGetInternalWindowPos"
+      number: 1513
+    }
+    value {
+      name: "NtUserGetKeyNameText"
+      number: 1514
+    }
+    value {
+      name: "NtUserGetKeyState"
+      number: 1515
+    }
+    value {
+      name: "NtUserGetKeyboardLayout"
+      number: 1516
+    }
+    value {
+      name: "NtUserGetKeyboardLayoutList"
+      number: 1517
+    }
+    value {
+      name: "NtUserGetKeyboardLayoutName"
+      number: 1518
+    }
+    value {
+      name: "NtUserGetKeyboardState"
+      number: 1519
+    }
+    value {
+      name: "NtUserGetLayeredWindowAttributes"
+      number: 1520
+    }
+    value {
+      name: "NtUserGetListBoxInfo"
+      number: 1521
+    }
+    value {
+      name: "NtUserGetMenuBarInfo"
+      number: 1522
+    }
+    value {
+      name: "NtUserGetMenuIndex"
+      number: 1523
+    }
+    value {
+      name: "NtUserGetMenuItemRect"
+      number: 1524
+    }
+    value {
+      name: "NtUserGetMessage"
+      number: 1525
+    }
+    value {
+      name: "NtUserGetMonitorBrightness"
+      number: 1526
+    }
+    value {
+      name: "NtUserGetMouseMovePointsEx"
+      number: 1527
+    }
+    value {
+      name: "NtUserGetObjectInformation"
+      number: 1528
+    }
+    value {
+      name: "NtUserGetOemBitmapSize"
+      number: 1529
+    }
+    value {
+      name: "NtUserGetOpenClipboardWindow"
+      number: 1530
+    }
+    value {
+      name: "NtUserGetOwnerTransformedMonitorRect"
+      number: 1531
+    }
+    value {
+      name: "NtUserGetPhysicalDeviceRect"
+      number: 1532
+    }
+    value {
+      name: "NtUserGetPointerCursorId"
+      number: 1533
+    }
+    value {
+      name: "NtUserGetPointerDevice"
+      number: 1534
+    }
+    value {
+      name: "NtUserGetPointerDeviceCursors"
+      number: 1535
+    }
+    value {
+      name: "NtUserGetPointerDeviceProperties"
+      number: 1536
+    }
+    value {
+      name: "NtUserGetPointerDeviceRects"
+      number: 1537
+    }
+    value {
+      name: "NtUserGetPointerDevices"
+      number: 1538
+    }
+    value {
+      name: "NtUserGetPointerFrameArrivalTimes"
+      number: 1539
+    }
+    value {
+      name: "NtUserGetPointerInfoList"
+      number: 1540
+    }
+    value {
+      name: "NtUserGetPointerInputTransform"
+      number: 1541
+    }
+    value {
+      name: "NtUserGetPointerType"
+      number: 1542
+    }
+    value {
+      name: "NtUserGetPrecisionTouchPadConfiguration"
+      number: 1543
+    }
+    value {
+      name: "NtUserGetPriorityClipboardFormat"
+      number: 1544
+    }
+    value {
+      name: "NtUserGetProcessDpiAwareness"
+      number: 1545
+    }
+    value {
+      name: "NtUserGetProcessDpiAwarenessContext"
+      number: 1546
+    }
+    value {
+      name: "NtUserGetProcessUIContextInformation"
+      number: 1547
+    }
+    value {
+      name: "NtUserGetProcessWindowStation"
+      number: 1548
+    }
+    value {
+      name: "NtUserGetProp"
+      number: 1549
+    }
+    value {
+      name: "NtUserGetQueueEventStatus"
+      number: 1550
+    }
+    value {
+      name: "NtUserGetQueueStatusReadonly"
+      number: 1551
+    }
+    value {
+      name: "NtUserGetRawInputBuffer"
+      number: 1552
+    }
+    value {
+      name: "NtUserGetRawInputData"
+      number: 1553
+    }
+    value {
+      name: "NtUserGetRawInputDeviceInfo"
+      number: 1554
+    }
+    value {
+      name: "NtUserGetRawInputDeviceList"
+      number: 1555
+    }
+    value {
+      name: "NtUserGetRawPointerDeviceData"
+      number: 1556
+    }
+    value {
+      name: "NtUserGetRegisteredRawInputDevices"
+      number: 1557
+    }
+    value {
+      name: "NtUserGetRequiredCursorSizes"
+      number: 1558
+    }
+    value {
+      name: "NtUserGetResizeDCompositionSynchronizationObject"
+      number: 1559
+    }
+    value {
+      name: "NtUserGetScrollBarInfo"
+      number: 1560
+    }
+    value {
+      name: "NtUserGetSystemDpiForProcess"
+      number: 1561
+    }
+    value {
+      name: "NtUserGetSystemMenu"
+      number: 1562
+    }
+    value {
+      name: "NtUserGetThreadDesktop"
+      number: 1563
+    }
+    value {
+      name: "NtUserGetThreadState"
+      number: 1564
+    }
+    value {
+      name: "NtUserGetTitleBarInfo"
+      number: 1565
+    }
+    value {
+      name: "NtUserGetTopLevelWindow"
+      number: 1566
+    }
+    value {
+      name: "NtUserGetTouchInputInfo"
+      number: 1567
+    }
+    value {
+      name: "NtUserGetTouchValidationStatus"
+      number: 1568
+    }
+    value {
+      name: "NtUserGetUpdateRect"
+      number: 1569
+    }
+    value {
+      name: "NtUserGetUpdateRgn"
+      number: 1570
+    }
+    value {
+      name: "NtUserGetUpdatedClipboardFormats"
+      number: 1571
+    }
+    value {
+      name: "NtUserGetWOWClass"
+      number: 1572
+    }
+    value {
+      name: "NtUserGetWindowBand"
+      number: 1573
+    }
+    value {
+      name: "NtUserGetWindowCompositionAttribute"
+      number: 1574
+    }
+    value {
+      name: "NtUserGetWindowCompositionInfo"
+      number: 1575
+    }
+    value {
+      name: "NtUserGetWindowDC"
+      number: 1576
+    }
+    value {
+      name: "NtUserGetWindowDisplayAffinity"
+      number: 1577
+    }
+    value {
+      name: "NtUserGetWindowFeedbackSetting"
+      number: 1578
+    }
+    value {
+      name: "NtUserGetWindowGroupId"
+      number: 1579
+    }
+    value {
+      name: "NtUserGetWindowMinimizeRect"
+      number: 1580
+    }
+    value {
+      name: "NtUserGetWindowPlacement"
+      number: 1581
+    }
+    value {
+      name: "NtUserGetWindowProcessHandle"
+      number: 1582
+    }
+    value {
+      name: "NtUserGetWindowRgnEx"
+      number: 1583
+    }
+    value {
+      name: "NtUserGhostWindowFromHungWindow"
+      number: 1584
+    }
+    value {
+      name: "NtUserHandleDelegatedInput"
+      number: 1585
+    }
+    value {
+      name: "NtUserHardErrorControl"
+      number: 1586
+    }
+    value {
+      name: "NtUserHideCaret"
+      number: 1587
+    }
+    value {
+      name: "NtUserHidePointerContactVisualization"
+      number: 1588
+    }
+    value {
+      name: "NtUserHiliteMenuItem"
+      number: 1589
+    }
+    value {
+      name: "NtUserHungWindowFromGhostWindow"
+      number: 1590
+    }
+    value {
+      name: "NtUserHwndQueryRedirectionInfo"
+      number: 1591
+    }
+    value {
+      name: "NtUserHwndSetRedirectionInfo"
+      number: 1592
+    }
+    value {
+      name: "NtUserImpersonateDdeClientWindow"
+      number: 1593
+    }
+    value {
+      name: "NtUserInheritWindowMonitor"
+      number: 1594
+    }
+    value {
+      name: "NtUserInitTask"
+      number: 1595
+    }
+    value {
+      name: "NtUserInitialize"
+      number: 1596
+    }
+    value {
+      name: "NtUserInitializeClientPfnArrays"
+      number: 1597
+    }
+    value {
+      name: "NtUserInitializeGenericHidInjection"
+      number: 1598
+    }
+    value {
+      name: "NtUserInitializeInputDeviceInjection"
+      number: 1599
+    }
+    value {
+      name: "NtUserInitializePointerDeviceInjection"
+      number: 1600
+    }
+    value {
+      name: "NtUserInitializePointerDeviceInjectionEx"
+      number: 1601
+    }
+    value {
+      name: "NtUserInitializeTouchInjection"
+      number: 1602
+    }
+    value {
+      name: "NtUserInjectDeviceInput"
+      number: 1603
+    }
+    value {
+      name: "NtUserInjectGenericHidInput"
+      number: 1604
+    }
+    value {
+      name: "NtUserInjectGesture"
+      number: 1605
+    }
+    value {
+      name: "NtUserInjectKeyboardInput"
+      number: 1606
+    }
+    value {
+      name: "NtUserInjectMouseInput"
+      number: 1607
+    }
+    value {
+      name: "NtUserInjectPointerInput"
+      number: 1608
+    }
+    value {
+      name: "NtUserInjectTouchInput"
+      number: 1609
+    }
+    value {
+      name: "NtUserInteractiveControlQueryUsage"
+      number: 1610
+    }
+    value {
+      name: "NtUserInternalClipCursor"
+      number: 1611
+    }
+    value {
+      name: "NtUserInternalGetWindowIcon"
+      number: 1612
+    }
+    value {
+      name: "NtUserInternalGetWindowText"
+      number: 1613
+    }
+    value {
+      name: "NtUserInvalidateRect"
+      number: 1614
+    }
+    value {
+      name: "NtUserInvalidateRgn"
+      number: 1615
+    }
+    value {
+      name: "NtUserIsChildWindowDpiMessageEnabled"
+      number: 1616
+    }
+    value {
+      name: "NtUserIsClipboardFormatAvailable"
+      number: 1617
+    }
+    value {
+      name: "NtUserIsMouseInPointerEnabled"
+      number: 1618
+    }
+    value {
+      name: "NtUserIsMouseInputEnabled"
+      number: 1619
+    }
+    value {
+      name: "NtUserIsNonClientDpiScalingEnabled"
+      number: 1620
+    }
+    value {
+      name: "NtUserIsResizeLayoutSynchronizationEnabled"
+      number: 1621
+    }
+    value {
+      name: "NtUserIsTopLevelWindow"
+      number: 1622
+    }
+    value {
+      name: "NtUserIsTouchWindow"
+      number: 1623
+    }
+    value {
+      name: "NtUserIsWindowBroadcastingDpiToChildren"
+      number: 1624
+    }
+    value {
+      name: "NtUserIsWindowGDIScaledDpiMessageEnabled"
+      number: 1625
+    }
+    value {
+      name: "NtUserKillTimer"
+      number: 1626
+    }
+    value {
+      name: "NtUserLayoutCompleted"
+      number: 1627
+    }
+    value {
+      name: "NtUserLinkDpiCursor"
+      number: 1628
+    }
+    value {
+      name: "NtUserLoadKeyboardLayoutEx"
+      number: 1629
+    }
+    value {
+      name: "NtUserLockCursor"
+      number: 1630
+    }
+    value {
+      name: "NtUserLockWindowStation"
+      number: 1631
+    }
+    value {
+      name: "NtUserLockWindowUpdate"
+      number: 1632
+    }
+    value {
+      name: "NtUserLockWorkStation"
+      number: 1633
+    }
+    value {
+      name: "NtUserLogicalToPerMonitorDPIPhysicalPoint"
+      number: 1634
+    }
+    value {
+      name: "NtUserLogicalToPhysicalDpiPointForWindow"
+      number: 1635
+    }
+    value {
+      name: "NtUserLogicalToPhysicalPoint"
+      number: 1636
+    }
+    value {
+      name: "NtUserMNDragLeave"
+      number: 1637
+    }
+    value {
+      name: "NtUserMNDragOver"
+      number: 1638
+    }
+    value {
+      name: "NtUserMagControl"
+      number: 1639
+    }
+    value {
+      name: "NtUserMagGetContextInformation"
+      number: 1640
+    }
+    value {
+      name: "NtUserMagSetContextInformation"
+      number: 1641
+    }
+    value {
+      name: "NtUserManageGestureHandlerWindow"
+      number: 1642
+    }
+    value {
+      name: "NtUserMapVirtualKeyEx"
+      number: 1643
+    }
+    value {
+      name: "NtUserMenuItemFromPoint"
+      number: 1644
+    }
+    value {
+      name: "NtUserMessageCall"
+      number: 1645
+    }
+    value {
+      name: "NtUserMinMaximize"
+      number: 1646
+    }
+    value {
+      name: "NtUserModifyUserStartupInfoFlags"
+      number: 1647
+    }
+    value {
+      name: "NtUserModifyWindowTouchCapability"
+      number: 1648
+    }
+    value {
+      name: "NtUserMoveWindow"
+      number: 1649
+    }
+    value {
+      name: "NtUserMsgWaitForMultipleObjectsEx"
+      number: 1650
+    }
+    value {
+      name: "NtUserNavigateFocus"
+      number: 1651
+    }
+    value {
+      name: "NtUserNotifyIMEStatus"
+      number: 1652
+    }
+    value {
+      name: "NtUserNotifyProcessCreate"
+      number: 1653
+    }
+    value {
+      name: "NtUserNotifyWinEvent"
+      number: 1654
+    }
+    value {
+      name: "NtUserOpenClipboard"
+      number: 1655
+    }
+    value {
+      name: "NtUserOpenDesktop"
+      number: 1656
+    }
+    value {
+      name: "NtUserOpenInputDesktop"
+      number: 1657
+    }
+    value {
+      name: "NtUserOpenThreadDesktop"
+      number: 1658
+    }
+    value {
+      name: "NtUserOpenWindowStation"
+      number: 1659
+    }
+    value {
+      name: "NtUserPaintDesktop"
+      number: 1660
+    }
+    value {
+      name: "NtUserPaintMenuBar"
+      number: 1661
+    }
+    value {
+      name: "NtUserPaintMonitor"
+      number: 1662
+    }
+    value {
+      name: "NtUserPeekMessage"
+      number: 1663
+    }
+    value {
+      name: "NtUserPerMonitorDPIPhysicalToLogicalPoint"
+      number: 1664
+    }
+    value {
+      name: "NtUserPhysicalToLogicalDpiPointForWindow"
+      number: 1665
+    }
+    value {
+      name: "NtUserPhysicalToLogicalPoint"
+      number: 1666
+    }
+    value {
+      name: "NtUserPostMessage"
+      number: 1667
+    }
+    value {
+      name: "NtUserPostThreadMessage"
+      number: 1668
+    }
+    value {
+      name: "NtUserPrintWindow"
+      number: 1669
+    }
+    value {
+      name: "NtUserProcessConnect"
+      number: 1670
+    }
+    value {
+      name: "NtUserProcessInkFeedbackCommand"
+      number: 1671
+    }
+    value {
+      name: "NtUserPromoteMouseInPointer"
+      number: 1672
+    }
+    value {
+      name: "NtUserPromotePointer"
+      number: 1673
+    }
+    value {
+      name: "NtUserQueryBSDRWindow"
+      number: 1674
+    }
+    value {
+      name: "NtUserQueryDisplayConfig"
+      number: 1675
+    }
+    value {
+      name: "NtUserQueryInformationThread"
+      number: 1676
+    }
+    value {
+      name: "NtUserQueryInputContext"
+      number: 1677
+    }
+    value {
+      name: "NtUserQuerySendMessage"
+      number: 1678
+    }
+    value {
+      name: "NtUserQueryWindow"
+      number: 1679
+    }
+    value {
+      name: "NtUserRealChildWindowFromPoint"
+      number: 1680
+    }
+    value {
+      name: "NtUserRealInternalGetMessage"
+      number: 1681
+    }
+    value {
+      name: "NtUserRealWaitMessageEx"
+      number: 1682
+    }
+    value {
+      name: "NtUserRedrawWindow"
+      number: 1683
+    }
+    value {
+      name: "NtUserRegisterBSDRWindow"
+      number: 1684
+    }
+    value {
+      name: "NtUserRegisterClassExWOW"
+      number: 1685
+    }
+    value {
+      name: "NtUserRegisterDManipHook"
+      number: 1686
+    }
+    value {
+      name: "NtUserRegisterEdgy"
+      number: 1687
+    }
+    value {
+      name: "NtUserRegisterErrorReportingDialog"
+      number: 1688
+    }
+    value {
+      name: "NtUserRegisterHotKey"
+      number: 1689
+    }
+    value {
+      name: "NtUserRegisterManipulationThread"
+      number: 1690
+    }
+    value {
+      name: "NtUserRegisterPointerDeviceNotifications"
+      number: 1691
+    }
+    value {
+      name: "NtUserRegisterPointerInputTarget"
+      number: 1692
+    }
+    value {
+      name: "NtUserRegisterRawInputDevices"
+      number: 1693
+    }
+    value {
+      name: "NtUserRegisterServicesProcess"
+      number: 1694
+    }
+    value {
+      name: "NtUserRegisterSessionPort"
+      number: 1695
+    }
+    value {
+      name: "NtUserRegisterShellPTPListener"
+      number: 1696
+    }
+    value {
+      name: "NtUserRegisterTasklist"
+      number: 1697
+    }
+    value {
+      name: "NtUserRegisterTouchHitTestingWindow"
+      number: 1698
+    }
+    value {
+      name: "NtUserRegisterTouchPadCapable"
+      number: 1699
+    }
+    value {
+      name: "NtUserRegisterUserApiHook"
+      number: 1700
+    }
+    value {
+      name: "NtUserRegisterWindowMessage"
+      number: 1701
+    }
+    value {
+      name: "NtUserReleaseDC"
+      number: 1702
+    }
+    value {
+      name: "NtUserReleaseDwmHitTestWaiters"
+      number: 1703
+    }
+    value {
+      name: "NtUserRemoteConnect"
+      number: 1704
+    }
+    value {
+      name: "NtUserRemoteRedrawRectangle"
+      number: 1705
+    }
+    value {
+      name: "NtUserRemoteRedrawScreen"
+      number: 1706
+    }
+    value {
+      name: "NtUserRemoteStopScreenUpdates"
+      number: 1707
+    }
+    value {
+      name: "NtUserRemoveClipboardFormatListener"
+      number: 1708
+    }
+    value {
+      name: "NtUserRemoveInjectionDevice"
+      number: 1709
+    }
+    value {
+      name: "NtUserRemoveMenu"
+      number: 1710
+    }
+    value {
+      name: "NtUserRemoveProp"
+      number: 1711
+    }
+    value {
+      name: "NtUserReportInertia"
+      number: 1712
+    }
+    value {
+      name: "NtUserRequestMoveSizeOperation"
+      number: 1713
+    }
+    value {
+      name: "NtUserResolveDesktop"
+      number: 1714
+    }
+    value {
+      name: "NtUserResolveDesktopForWOW"
+      number: 1715
+    }
+    value {
+      name: "NtUserRestoreWindowDpiChanges"
+      number: 1716
+    }
+    value {
+      name: "NtUserSBGetParms"
+      number: 1717
+    }
+    value {
+      name: "NtUserScrollDC"
+      number: 1718
+    }
+    value {
+      name: "NtUserScrollWindowEx"
+      number: 1719
+    }
+    value {
+      name: "NtUserSelectPalette"
+      number: 1720
+    }
+    value {
+      name: "NtUserSendEventMessage"
+      number: 1721
+    }
+    value {
+      name: "NtUserSendInput"
+      number: 1722
+    }
+    value {
+      name: "NtUserSendInteractiveControlHapticsReport"
+      number: 1723
+    }
+    value {
+      name: "NtUserSendTouchInput"
+      number: 1724
+    }
+    value {
+      name: "NtUserSetActivationFilter"
+      number: 1725
+    }
+    value {
+      name: "NtUserSetActiveProcess"
+      number: 1726
+    }
+    value {
+      name: "NtUserSetActiveProcessForMonitor"
+      number: 1727
+    }
+    value {
+      name: "NtUserSetActiveWindow"
+      number: 1728
+    }
+    value {
+      name: "NtUserSetAppImeLevel"
+      number: 1729
+    }
+    value {
+      name: "NtUserSetAutoRotation"
+      number: 1730
+    }
+    value {
+      name: "NtUserSetBridgeWindowChild"
+      number: 1731
+    }
+    value {
+      name: "NtUserSetBrokeredForeground"
+      number: 1732
+    }
+    value {
+      name: "NtUserSetCalibrationData"
+      number: 1733
+    }
+    value {
+      name: "NtUserSetCapture"
+      number: 1734
+    }
+    value {
+      name: "NtUserSetChildWindowNoActivate"
+      number: 1735
+    }
+    value {
+      name: "NtUserSetClassLong"
+      number: 1736
+    }
+    value {
+      name: "NtUserSetClassLongPtr"
+      number: 1737
+    }
+    value {
+      name: "NtUserSetClassWord"
+      number: 1738
+    }
+    value {
+      name: "NtUserSetClipboardData"
+      number: 1739
+    }
+    value {
+      name: "NtUserSetClipboardViewer"
+      number: 1740
+    }
+    value {
+      name: "NtUserSetConsoleReserveKeys"
+      number: 1741
+    }
+    value {
+      name: "NtUserSetCoreWindow"
+      number: 1742
+    }
+    value {
+      name: "NtUserSetCoreWindowPartner"
+      number: 1743
+    }
+    value {
+      name: "NtUserSetCursor"
+      number: 1744
+    }
+    value {
+      name: "NtUserSetCursorContents"
+      number: 1745
+    }
+    value {
+      name: "NtUserSetCursorIconData"
+      number: 1746
+    }
+    value {
+      name: "NtUserSetCursorPos"
+      number: 1747
+    }
+    value {
+      name: "NtUserSetDesktopColorTransform"
+      number: 1748
+    }
+    value {
+      name: "NtUserSetDialogControlDpiChangeBehavior"
+      number: 1749
+    }
+    value {
+      name: "NtUserSetDimUndimTransitionTime"
+      number: 1750
+    }
+    value {
+      name: "NtUserSetDisplayAutoRotationPreferences"
+      number: 1751
+    }
+    value {
+      name: "NtUserSetDisplayConfig"
+      number: 1752
+    }
+    value {
+      name: "NtUserSetDisplayMapping"
+      number: 1753
+    }
+    value {
+      name: "NtUserSetFallbackForeground"
+      number: 1754
+    }
+    value {
+      name: "NtUserSetFeatureReportResponse"
+      number: 1755
+    }
+    value {
+      name: "NtUserSetFocus"
+      number: 1756
+    }
+    value {
+      name: "NtUserSetForegroundWindowForApplication"
+      number: 1757
+    }
+    value {
+      name: "NtUserSetGestureConfig"
+      number: 1758
+    }
+    value {
+      name: "NtUserSetImeHotKey"
+      number: 1759
+    }
+    value {
+      name: "NtUserSetImeInfoEx"
+      number: 1760
+    }
+    value {
+      name: "NtUserSetImeOwnerWindow"
+      number: 1761
+    }
+    value {
+      name: "NtUserSetImmersiveBackgroundWindow"
+      number: 1762
+    }
+    value {
+      name: "NtUserSetInformationProcess"
+      number: 1763
+    }
+    value {
+      name: "NtUserSetInformationThread"
+      number: 1764
+    }
+    value {
+      name: "NtUserSetInteractiveControlFocus"
+      number: 1765
+    }
+    value {
+      name: "NtUserSetInteractiveCtrlRotationAngle"
+      number: 1766
+    }
+    value {
+      name: "NtUserSetInternalWindowPos"
+      number: 1767
+    }
+    value {
+      name: "NtUserSetKeyboardState"
+      number: 1768
+    }
+    value {
+      name: "NtUserSetLayeredWindowAttributes"
+      number: 1769
+    }
+    value {
+      name: "NtUserSetLogonNotifyWindow"
+      number: 1770
+    }
+    value {
+      name: "NtUserSetManipulationInputTarget"
+      number: 1771
+    }
+    value {
+      name: "NtUserSetMenu"
+      number: 1772
+    }
+    value {
+      name: "NtUserSetMenuContextHelpId"
+      number: 1773
+    }
+    value {
+      name: "NtUserSetMenuDefaultItem"
+      number: 1774
+    }
+    value {
+      name: "NtUserSetMenuFlagRtoL"
+      number: 1775
+    }
+    value {
+      name: "NtUserSetMirrorRendering"
+      number: 1776
+    }
+    value {
+      name: "NtUserSetMonitorBrightness"
+      number: 1777
+    }
+    value {
+      name: "NtUserSetObjectInformation"
+      number: 1778
+    }
+    value {
+      name: "NtUserSetParent"
+      number: 1779
+    }
+    value {
+      name: "NtUserSetPrecisionTouchPadConfiguration"
+      number: 1780
+    }
+    value {
+      name: "NtUserSetProcessDPIAware"
+      number: 1781
+    }
+    value {
+      name: "NtUserSetProcessDpiAwareness"
+      number: 1782
+    }
+    value {
+      name: "NtUserSetProcessDpiAwarenessContext"
+      number: 1783
+    }
+    value {
+      name: "NtUserSetProcessInteractionFlags"
+      number: 1784
+    }
+    value {
+      name: "NtUserSetProcessRestrictionExemption"
+      number: 1785
+    }
+    value {
+      name: "NtUserSetProcessUIAccessZorder"
+      number: 1786
+    }
+    value {
+      name: "NtUserSetProcessWindowStation"
+      number: 1787
+    }
+    value {
+      name: "NtUserSetProp"
+      number: 1788
+    }
+    value {
+      name: "NtUserSetScrollInfo"
+      number: 1789
+    }
+    value {
+      name: "NtUserSetSensorPresence"
+      number: 1790
+    }
+    value {
+      name: "NtUserSetShellWindowEx"
+      number: 1791
+    }
+    value {
+      name: "NtUserSetSysColors"
+      number: 1792
+    }
+    value {
+      name: "NtUserSetSystemCursor"
+      number: 1793
+    }
+    value {
+      name: "NtUserSetSystemMenu"
+      number: 1794
+    }
+    value {
+      name: "NtUserSetSystemTimer"
+      number: 1795
+    }
+    value {
+      name: "NtUserSetTargetForResourceBrokering"
+      number: 1796
+    }
+    value {
+      name: "NtUserSetThreadDesktop"
+      number: 1797
+    }
+    value {
+      name: "NtUserSetThreadInputBlocked"
+      number: 1798
+    }
+    value {
+      name: "NtUserSetThreadLayoutHandles"
+      number: 1799
+    }
+    value {
+      name: "NtUserSetThreadState"
+      number: 1800
+    }
+    value {
+      name: "NtUserSetTimer"
+      number: 1801
+    }
+    value {
+      name: "NtUserSetWinEventHook"
+      number: 1802
+    }
+    value {
+      name: "NtUserSetWindowArrangement"
+      number: 1803
+    }
+    value {
+      name: "NtUserSetWindowBand"
+      number: 1804
+    }
+    value {
+      name: "NtUserSetWindowCompositionAttribute"
+      number: 1805
+    }
+    value {
+      name: "NtUserSetWindowCompositionTransition"
+      number: 1806
+    }
+    value {
+      name: "NtUserSetWindowDisplayAffinity"
+      number: 1807
+    }
+    value {
+      name: "NtUserSetWindowFNID"
+      number: 1808
+    }
+    value {
+      name: "NtUserSetWindowFeedbackSetting"
+      number: 1809
+    }
+    value {
+      name: "NtUserSetWindowGroup"
+      number: 1810
+    }
+    value {
+      name: "NtUserSetWindowLong"
+      number: 1811
+    }
+    value {
+      name: "NtUserSetWindowLongPtr"
+      number: 1812
+    }
+    value {
+      name: "NtUserSetWindowPlacement"
+      number: 1813
+    }
+    value {
+      name: "NtUserSetWindowPos"
+      number: 1814
+    }
+    value {
+      name: "NtUserSetWindowRgn"
+      number: 1815
+    }
+    value {
+      name: "NtUserSetWindowRgnEx"
+      number: 1816
+    }
+    value {
+      name: "NtUserSetWindowShowState"
+      number: 1817
+    }
+    value {
+      name: "NtUserSetWindowStationUser"
+      number: 1818
+    }
+    value {
+      name: "NtUserSetWindowWord"
+      number: 1819
+    }
+    value {
+      name: "NtUserSetWindowsHookAW"
+      number: 1820
+    }
+    value {
+      name: "NtUserSetWindowsHookEx"
+      number: 1821
+    }
+    value {
+      name: "NtUserSfmDestroyLogicalSurfaceBinding"
+      number: 1822
+    }
+    value {
+      name: "NtUserSfmDxBindSwapChain"
+      number: 1823
+    }
+    value {
+      name: "NtUserSfmDxGetSwapChainStats"
+      number: 1824
+    }
+    value {
+      name: "NtUserSfmDxOpenSwapChain"
+      number: 1825
+    }
+    value {
+      name: "NtUserSfmDxQuerySwapChainBindingStatus"
+      number: 1826
+    }
+    value {
+      name: "NtUserSfmDxReleaseSwapChain"
+      number: 1827
+    }
+    value {
+      name: "NtUserSfmDxReportPendingBindingsToDwm"
+      number: 1828
+    }
+    value {
+      name: "NtUserSfmDxSetSwapChainBindingStatus"
+      number: 1829
+    }
+    value {
+      name: "NtUserSfmDxSetSwapChainStats"
+      number: 1830
+    }
+    value {
+      name: "NtUserSfmGetLogicalSurfaceBinding"
+      number: 1831
+    }
+    value {
+      name: "NtUserShowCaret"
+      number: 1832
+    }
+    value {
+      name: "NtUserShowCursor"
+      number: 1833
+    }
+    value {
+      name: "NtUserShowScrollBar"
+      number: 1834
+    }
+    value {
+      name: "NtUserShowSystemCursor"
+      number: 1835
+    }
+    value {
+      name: "NtUserShowWindow"
+      number: 1836
+    }
+    value {
+      name: "NtUserShowWindowAsync"
+      number: 1837
+    }
+    value {
+      name: "NtUserShutdownBlockReasonCreate"
+      number: 1838
+    }
+    value {
+      name: "NtUserShutdownBlockReasonQuery"
+      number: 1839
+    }
+    value {
+      name: "NtUserShutdownReasonDestroy"
+      number: 1840
+    }
+    value {
+      name: "NtUserSignalRedirectionStartComplete"
+      number: 1841
+    }
+    value {
+      name: "NtUserSlicerControl"
+      number: 1842
+    }
+    value {
+      name: "NtUserSoundSentry"
+      number: 1843
+    }
+    value {
+      name: "NtUserStopAndEndInertia"
+      number: 1844
+    }
+    value {
+      name: "NtUserSwitchDesktop"
+      number: 1845
+    }
+    value {
+      name: "NtUserSystemParametersInfo"
+      number: 1846
+    }
+    value {
+      name: "NtUserSystemParametersInfoForDpi"
+      number: 1847
+    }
+    value {
+      name: "NtUserTestForInteractiveUser"
+      number: 1848
+    }
+    value {
+      name: "NtUserThunkedMenuInfo"
+      number: 1849
+    }
+    value {
+      name: "NtUserThunkedMenuItemInfo"
+      number: 1850
+    }
+    value {
+      name: "NtUserToUnicodeEx"
+      number: 1851
+    }
+    value {
+      name: "NtUserTrackMouseEvent"
+      number: 1852
+    }
+    value {
+      name: "NtUserTrackPopupMenuEx"
+      number: 1853
+    }
+    value {
+      name: "NtUserTransformPoint"
+      number: 1854
+    }
+    value {
+      name: "NtUserTransformRect"
+      number: 1855
+    }
+    value {
+      name: "NtUserTranslateAccelerator"
+      number: 1856
+    }
+    value {
+      name: "NtUserTranslateMessage"
+      number: 1857
+    }
+    value {
+      name: "NtUserUndelegateInput"
+      number: 1858
+    }
+    value {
+      name: "NtUserUnhookWinEvent"
+      number: 1859
+    }
+    value {
+      name: "NtUserUnhookWindowsHookEx"
+      number: 1860
+    }
+    value {
+      name: "NtUserUnloadKeyboardLayout"
+      number: 1861
+    }
+    value {
+      name: "NtUserUnlockWindowStation"
+      number: 1862
+    }
+    value {
+      name: "NtUserUnregisterClass"
+      number: 1863
+    }
+    value {
+      name: "NtUserUnregisterHotKey"
+      number: 1864
+    }
+    value {
+      name: "NtUserUnregisterSessionPort"
+      number: 1865
+    }
+    value {
+      name: "NtUserUnregisterUserApiHook"
+      number: 1866
+    }
+    value {
+      name: "NtUserUpdateDefaultDesktopThumbnail"
+      number: 1867
+    }
+    value {
+      name: "NtUserUpdateInputContext"
+      number: 1868
+    }
+    value {
+      name: "NtUserUpdateInstance"
+      number: 1869
+    }
+    value {
+      name: "NtUserUpdateLayeredWindow"
+      number: 1870
+    }
+    value {
+      name: "NtUserUpdatePerUserSystemParameters"
+      number: 1871
+    }
+    value {
+      name: "NtUserUpdateWindowInputSinkHints"
+      number: 1872
+    }
+    value {
+      name: "NtUserUpdateWindowTrackingInfo"
+      number: 1873
+    }
+    value {
+      name: "NtUserUpdateWindowTransform"
+      number: 1874
+    }
+    value {
+      name: "NtUserUserHandleGrantAccess"
+      number: 1875
+    }
+    value {
+      name: "NtUserValidateHandleSecure"
+      number: 1876
+    }
+    value {
+      name: "NtUserValidateRect"
+      number: 1877
+    }
+    value {
+      name: "NtUserValidateTimerCallback"
+      number: 1878
+    }
+    value {
+      name: "NtUserVkKeyScanEx"
+      number: 1879
+    }
+    value {
+      name: "NtUserWOWCleanup"
+      number: 1880
+    }
+    value {
+      name: "NtUserWaitAvailableMessageEx"
+      number: 1881
+    }
+    value {
+      name: "NtUserWaitForInputIdle"
+      number: 1882
+    }
+    value {
+      name: "NtUserWaitForMsgAndEvent"
+      number: 1883
+    }
+    value {
+      name: "NtUserWaitForRedirectionStartComplete"
+      number: 1884
+    }
+    value {
+      name: "NtUserWaitMessage"
+      number: 1885
+    }
+    value {
+      name: "NtUserWin32PoolAllocationStats"
+      number: 1886
+    }
+    value {
+      name: "NtUserWindowFromDC"
+      number: 1887
+    }
+    value {
+      name: "NtUserWindowFromPhysicalPoint"
+      number: 1888
+    }
+    value {
+      name: "NtUserWindowFromPoint"
+      number: 1889
+    }
+    value {
+      name: "NtUserYieldTask"
+      number: 1890
+    }
+    value {
+      name: "NtValidateCompositionSurfaceHandle"
+      number: 1891
+    }
+    value {
+      name: "NtVisualCaptureBits"
+      number: 1892
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}

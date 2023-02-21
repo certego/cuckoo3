@@ -1,0 +1,63 @@
+file {
+  name: "inject.proto"
+  package: "threemon"
+  message_type {
+    name: "Inject"
+    field {
+      name: "ts"
+      number: 4
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT32
+    }
+    field {
+      name: "technique"
+      number: 1
+      label: LABEL_OPTIONAL
+      type: TYPE_ENUM
+      type_name: ".threemon.Technique"
+    }
+    field {
+      name: "srcpid"
+      number: 2
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "srcprocid"
+      number: 5
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+    field {
+      name: "dstpid"
+      number: 3
+      label: LABEL_OPTIONAL
+      type: TYPE_UINT64
+    }
+    field {
+      name: "dstprocid"
+      number: 6
+      label: LABEL_OPTIONAL
+      type: TYPE_INT32
+    }
+  }
+  enum_type {
+    name: "Technique"
+    value {
+      name: "CreateRemoteThread"
+      number: 0
+    }
+    value {
+      name: "ShellTrayWindow"
+      number: 1
+    }
+    value {
+      name: "QueueUserAPC"
+      number: 2
+    }
+  }
+  options {
+    optimize_for: CODE_SIZE
+  }
+  syntax: "proto3"
+}
